@@ -1,16 +1,16 @@
-#h1 {
+h1 {
   text-align: center;
 }
 
-#p {
+p {
   text-align: center;
 }
 
-#div {
+div {
   text-align: center;
 }
 
-#footer {
+footer {
     position: fixed;
     bottom: 0;
 }
