@@ -11,7 +11,7 @@ div {
 }
 
 footer {
-  position: fixed;
+  vertical-align: bottom;
   bottom: 0;
   text-align: center;
   align-items: center;
