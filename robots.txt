@@ -1,10 +1,57 @@
 User-agent: *
 Disallow:
+
+User-agent: AhrefsBot
+User-agent: Amazonbot
+User-agent: anthropic-ai
+User-agent: Applebot-Extended
+User-agent: Bytespider
+User-agent: CCBot
+User-agent: ChatGPT-User
+User-agent: Claude
+User-agent: Claude-Web
+User-agent: ClaudeBot
+User-agent: coccocbot-web
+User-agent: cohere-ai
+User-agent: Diffbot
+User-agent: Exabot
+User-agent: Google-Extended
+User-agent: GPTBot
+User-agent: Meta-ExternalFetcher
+User-agent: MistralAI-User
+User-agent: MistralAI-User/1.0
+User-agent: MJ12bot
+User-agent: OAI-SearchBot
+User-agent: Perplexity-User
+User-agent: PerplexityBot
+User-agent: PetalBot
+User-agent: proximic
+User-agent: SemrushBot
+User-agent: SemrushBot-OCOB
+User-agent: SemrushBot-SWA
+User-agent: Timpibot
+User-agent: Yandex
+User-agent: YandexAdditional
+User-agent: YandexAdditionalBot
+User-agent: YandexBot
+User-agent: YandexImages
+User-agent: YandexRenderBot
+User-agent: YouBot
+Disallow: /
+
 User-agent: Googlebot
 Disallow:
 User-agent: Bingbot
 Disallow:
 User-agent: Baiduspider
 Disallow:
+User-agent: DeepSeekBot
+Disallow:
 
 Sitemap: https://www.boomgaard.org/sitemap.xml
+
+# All copyrights, neighbouring rights and database rights in the content and layout of the
+# Boomgaard Foreign Languages Publishing Company websites are explicitly reserved by the 果园外文出版社.
+# The content of the Boomgaard Foreign Languages Publishing Company websites is for commercial use only by the 果园外文出版社
+# and it is not allowed to collect data from the websites by means of screen scraping or any other automated method.
+# Also see the terms of use of the 果园外文出版社 at www.boomgaard.org/terms
