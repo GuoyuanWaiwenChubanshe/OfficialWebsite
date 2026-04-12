@@ -10,14 +10,14 @@ div {
   text-align: center;
 }
 
-navbar {
+#navbar {
             position: relative;
             width: 100vw;
             height: 40px;
             background-color: rgb(61, 59, 59);
         }
 
-navbar img {
+#navbar img {
             position: absolute;
             top: 50%;
             left: 50%;
