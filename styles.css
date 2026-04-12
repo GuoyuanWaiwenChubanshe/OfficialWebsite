@@ -10,6 +10,22 @@ div {
   text-align: center;
 }
 
+navbar {
+            position: relative;
+            width: 100vw;
+            height: 40px;
+            background-color: rgb(61, 59, 59);
+        }
+
+navbar img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+        }
+
 footer {
   text-align: center;
   left: 0;
