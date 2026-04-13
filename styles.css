@@ -37,11 +37,6 @@ header {
             color: white;
         }
 
-nav {
-  text-align: center;
-  align-items: center;
-}
-
 a:active {
   color: black;
 }
