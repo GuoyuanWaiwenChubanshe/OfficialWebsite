@@ -10,13 +10,13 @@ div {
   text-align: center;
 }
 
-#navbar {
+.logo {
             position: relative;
             width: 100%;
             height: 70px;
         }
 
-#navbar img {
+.logo img {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -24,6 +24,8 @@ div {
             width: 300px;
             height: 70px;
         }
+
+
 
 a:active {
   color: black;
