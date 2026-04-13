@@ -16,19 +16,16 @@ div {
     box-sizing: border-box;
 }
 
-/* General */
 body {
     background-color: #ffffff;
 }
 
-/* Container */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Top Header */
 .top-header {
     background-color: #EE1C25;
     padding: 15px 0;
@@ -39,7 +36,6 @@ body {
     object-fit: contain;
 }
 
-/* Navigation Bar */
 .nav-bar {
     background-color: #ffffff;
 }
@@ -58,7 +54,6 @@ body {
     position: relative;
 }
 
-/* Hover effect */
 .nav-links a::after {
     content: "";
     position: absolute;
