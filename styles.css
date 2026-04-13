@@ -25,7 +25,9 @@ div {
             height: 70px;
         }
 
-
+.nav {
+  text-align: center;
+}
 
 a:active {
   color: black;
