@@ -26,6 +26,10 @@ body {
     margin: 0 auto;
 }
 
+.top-bar {
+    background-color: #ffffff;
+}
+
 .top-header {
     background-color: #EE1C25;
     padding: 15px 0;
