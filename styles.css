@@ -106,39 +106,3 @@ footer {
   bottom: 15px;
   position: fixed;
 }
-
-        .container404 {
-            max-width: 600px;
-        }
-
-        .404h1 {
-            font-size: 6rem;
-            margin: 0;
-            color: #EE1C25;
-        }
-
-        .404h2 {
-            font-size: 1.5rem;
-            margin: 10px 0 20px;
-            font-weight: normal;
-        }
-
-        .404p {
-            font-size: 1rem;
-            color: #ccc;
-        }
-
-        .404a {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            border: 1px solid #EE1C25;
-            color: #EE1C25;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .404a:hover {
-            background: #EE1C25;
-            color: #FFFFFF;
-        }
