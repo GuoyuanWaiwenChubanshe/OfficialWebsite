@@ -28,10 +28,4 @@
   <changefreq>Daily</changefreq>
   <priority>0.80</priority>
 </url>
-<url>
-  <loc>https://www.boomgaard.org/operation-information</loc>
-  <lastmod>2026-04-15T18:46:10+00:00</lastmod>
-  <changefreq>Daily</changefreq>
-  <priority>0.80</priority>
-</url>
 </urlset>
