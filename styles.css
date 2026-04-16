@@ -98,7 +98,7 @@ a {
 }
 
 .footer-top {
-  background-color: #c00000;
+  background-color: #EE1C25;
   color: white;
   text-align: center;
   padding: 20px 10px;
@@ -124,9 +124,8 @@ a {
   text-decoration: underline;
 }
 
-/* Grey bar */
 .footer-bottom {
-  background-color: #e0e0e0;
+  background-color: ##404040;
   display: flex;
   justify-content: space-between;
   align-items: center;
