@@ -40,14 +40,14 @@ main {
   padding: 4px 10px;
   font-size: 13px;
   color: #000000;
-  align: left;
+  text-align: left;
+  align-self: flex-start;
 }
 
 .breadcrumb a {
   color: #000000;
   text-decoration: none;
   transition: color 0.2s ease;
-  text-align: left;
 }
 
 .breadcrumb a:hover {
