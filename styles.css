@@ -167,8 +167,9 @@ a {
       color: #333;
     }
 
-    .book-story a{
+    .book-story a {
       color: #000000;
+      text-decoration: none;
     }
 
     .book-grid {
