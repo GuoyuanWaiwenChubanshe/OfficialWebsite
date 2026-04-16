@@ -150,6 +150,18 @@ a {
   transform: scale(1.05);
 }
 
+.book-story {
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.book-story p {
+  margin-bottom: 15px;
+}
+
 .footer-top {
   background-color: #EE1C25;
   color: white;
