@@ -93,16 +93,48 @@ a {
   text-decoration: none;
 }
 
-.nav-footer a {
-  text-decoration: none;
-  color: #000000;
+.footer-top {
+  background-color: #c00000;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
 }
 
-footer {
+.footer-top p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.footer-links {
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Grey bar */
+.footer-bottom {
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
   font-size: 12px;
-  text-align: center;
-  left: 0;
-  right: 0;
-  bottom: 15px;
-  position: fixed;
+}
+
+.footer-bottom a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
 }
