@@ -97,6 +97,78 @@ a {
   text-decoration: none;
 }
 
+    .welcome {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .welcome h1 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .welcome a {
+      color: red;
+      text-decoration: none;
+    }
+
+    .books {
+      padding: 40px 0;
+    }
+
+    .books h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .book-story {
+      max-width: 900px;
+      margin: 0 auto 40px auto;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 30px;
+    }
+
+    .book-card {
+      text-decoration: none;
+      color: black;
+      transition: transform 0.2s ease;
+    }
+
+    .book-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .book-card img {
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    .book-meta {
+      margin-top: 10px;
+    }
+
+    .book-meta .title {
+      font-weight: bold;
+    }
+
+    .book-meta .author,
+    .book-meta .year {
+      font-size: 13px;
+      color: #666;
+    }
+
+    .book-meta .desc {
+      font-size: 13px;
+      margin-top: 5px;
+      color: #444;
+    }
+
 .footer-top {
   background-color: #EE1C25;
   color: white;
