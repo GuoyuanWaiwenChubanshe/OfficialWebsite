@@ -167,6 +167,10 @@ a {
       color: #333;
     }
 
+    .book-story a{
+      color: #000000;
+    }
+
     .book-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
