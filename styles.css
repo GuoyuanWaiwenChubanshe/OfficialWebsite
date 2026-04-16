@@ -33,6 +33,30 @@ main {
   margin-bottom: 60px 0;
 }
 
+.breadcrumb {
+  width: 100%;
+  max-width: 1200px;
+  margin: 6px auto 0 auto;
+  padding: 4px 10px;
+  font-size: 13px;
+  color: #666;
+}
+
+.breadcrumb a {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+  color: #c00;
+}
+
+.breadcrumb span {
+  margin: 0 6px;
+  color: #aaa;
+}
+
 body {
     background-color: #ffffff;
 }
