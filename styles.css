@@ -225,6 +225,13 @@ a {
       color: #444;
     }
 
+.book-card-full {
+  text-decoration: none;
+  color: black;
+  transition: transform 0.2s ease;
+
+}
+
 .book-card-full img {
   width: 100%;
   height: auto;
