@@ -69,6 +69,12 @@ body {
     margin: 0 auto;
 }
 
+.container-full {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .top-header {
     background-color: #EE1C25;
     padding: 15px 0;
@@ -178,6 +184,12 @@ a {
       gap: 30px;
     }
 
+    .book-grid-full {
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+     gap: 20px;
+    }
+
     .book-card {
       text-decoration: none;
       color: black;
@@ -212,6 +224,39 @@ a {
       margin-top: 5px;
       color: #444;
     }
+
+.book-card-full img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+
+.book-meta-full {
+margin-top: 10px;
+
+}
+
+.book-meta-full .title {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.book-meta-full .author {
+  color: #666;
+  font-size: 12px;
+}
+
+.book-meta-full .year {
+  color: #666;
+  font-size: 12px;
+}
+
+.book-meta-full .desc {
+  font-size: 12px;
+  margin-top: 5px;
+  color: #444;
+}
 
 .footer-top {
   background-color: #EE1C25;
