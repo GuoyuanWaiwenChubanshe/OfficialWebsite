@@ -231,10 +231,14 @@ a {
   border-radius: 4px;
 }
 
+.book-card:hover {
+  transform: translateY(-5px);
+
+}
 
 .book-meta-full {
 margin-top: 10px;
-
+text-decoration: none;
 }
 
 .book-meta-full .title {
