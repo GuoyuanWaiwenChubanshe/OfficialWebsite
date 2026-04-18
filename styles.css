@@ -231,7 +231,7 @@ a {
   border-radius: 4px;
 }
 
-.book-card:hover {
+.book-card-full:hover {
   transform: translateY(-5px);
 
 }
