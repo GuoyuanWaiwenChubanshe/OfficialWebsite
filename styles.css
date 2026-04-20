@@ -306,3 +306,11 @@ text-decoration: none;
   color: #D3D3D3;
   text-decoration: none;
 }
+
+.privacy-policy {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  line-height: 1.7;
+}
