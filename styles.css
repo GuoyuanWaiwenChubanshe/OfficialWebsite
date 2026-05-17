@@ -279,7 +279,7 @@ text-decoration: none;
 
     .about-page {
       background-color: #FFFFFF;
-      color: #2e2e2c;
+      color: #000000;
       line-height: 1.7;
       display: flex;
       flex-direction: column;
@@ -303,8 +303,8 @@ text-decoration: none;
       font-size: 2.5rem;
       font-weight: 400;
       letter-spacing: 0.03em;
-      color: #2c3a2c;
-      border-bottom: 1px solid #d9d9d2;
+      color: #000000;
+      border-bottom: 1px solid #CDCDCD;
       padding-bottom: 0.8rem;
       margin-bottom: 0.2rem;
       line-height: 1.3;
@@ -329,9 +329,9 @@ text-decoration: none;
     .about-lede {
       font-size: 1.4rem;
       line-height: 1.6;
-      color: #1f2a1f;
+      color: #000000;
       font-weight: 400;
-      border-left: 3px solid #b9bfb0;
+      border-left: 3px solid #CDCDCD;
       padding-left: 1.2rem;
       margin: 0.5rem 0 0.8rem;
       font-style: normal;
@@ -339,7 +339,7 @@ text-decoration: none;
 
     .about-text {
       font-size: 1.1rem;
-      color: #3a3e38;
+      color: #666;
       text-align: justify;
       text-justify: inter-word;
       margin-bottom: 0.3rem;
@@ -347,12 +347,12 @@ text-decoration: none;
 
     .about-text strong {
       font-weight: 600;
-      color: #2c3a2c;
+      color: #444;
     }
 
     .about-divider {
       border: none;
-      border-top: 1px solid #d2d6cb;
+      border-top: 1px solid #CDCDCD;
       margin: 0.8rem 0 1.2rem;
       width: 100%;
     }
@@ -367,35 +367,27 @@ text-decoration: none;
     .about-mission-text {
       font-size: 1.15rem;
       font-style: normal;
-      color: #2d3b2a;
+      color: #666;
       margin-bottom: 0.8rem;
     }
 
     .about-highlight {
       font-weight: 500;
-      color: #1f3b1a;
-      background: #f0f2e9;
+      color: #000000;
+      background: #FFFFFF;
       padding: 0 0.2rem;
     }
 
     .about-link {
-      color: #3f5438;
-      text-decoration: underline;
-      text-decoration-color: #b9bfa5;
-      text-underline-offset: 3px;
-      text-decoration-thickness: 1px;
+      color: #000000;
+      text-decoration: none;
       transition: color 0.2s ease, text-decoration-color 0.2s;
       font-weight: 450;
     }
 
-    .about-link:hover {
-      color: #1e2d1a;
-      text-decoration-color: #5f734c;
-    }
-
     .about-note {
       font-size: 0.95rem;
-      color: #6b6f65;
+      color: #666;
       margin-top: 0.3rem;
       font-style: italic;
       letter-spacing: 0.02em;
@@ -412,14 +404,14 @@ text-decoration: none;
       margin-bottom: 0.5rem;
       padding-left: 1.6rem;
       position: relative;
-      color: #3a3e38;
+      color: #444;
     }
 
     .about-list li::before {
       content: "•";
       position: absolute;
       left: 0;
-      color: #7f8c6b;
+      color: #444;
       font-size: 1rem;
     }
 
