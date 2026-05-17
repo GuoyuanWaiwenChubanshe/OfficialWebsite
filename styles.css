@@ -270,7 +270,7 @@ text-decoration: none;
   color: #444;
 }
 
-    /* === about-page base & resets (scoped) === */
+    /* Scoped, independent classes for the About page – no overlap with existing styles */
     .about-page * {
       margin: 0;
       padding: 0;
@@ -278,7 +278,8 @@ text-decoration: none;
     }
 
     .about-page {
-      color: #FFFFFF;
+      background-color: #FFFFFF;
+      color: #2e2e2c;
       line-height: 1.7;
       display: flex;
       flex-direction: column;
@@ -289,7 +290,6 @@ text-decoration: none;
       min-height: 100vh;
     }
 
-    /* main container – mirrors site's centered narrow column */
     .about-container {
       max-width: 720px;
       width: 100%;
@@ -299,12 +299,11 @@ text-decoration: none;
       gap: 2.2rem;
     }
 
-    /* --- typography --- */
     .about-title {
       font-size: 2.5rem;
       font-weight: 400;
       letter-spacing: 0.03em;
-      color: #2c3a2c;   /* deep green-black, reminiscent of orchard */
+      color: #2c3a2c;
       border-bottom: 1px solid #d9d9d2;
       padding-bottom: 0.8rem;
       margin-bottom: 0.2rem;
@@ -358,9 +357,8 @@ text-decoration: none;
       width: 100%;
     }
 
-    /* callout / original quote block */
     .about-mission-block {
-      background: #f5f6f0;
+      background: #FFFFFF;
       padding: 1.5rem 1.5rem 1.2rem;
       border-radius: 2px;
       margin: 0.8rem 0 1rem;
@@ -380,7 +378,6 @@ text-decoration: none;
       padding: 0 0.2rem;
     }
 
-    /* links styled like original site (understated underline) */
     .about-link {
       color: #3f5438;
       text-decoration: underline;
@@ -396,7 +393,6 @@ text-decoration: none;
       text-decoration-color: #5f734c;
     }
 
-    /* small note / attribution */
     .about-note {
       font-size: 0.95rem;
       color: #6b6f65;
@@ -427,7 +423,6 @@ text-decoration: none;
       font-size: 1rem;
     }
 
-    /* responsive spacing */
     @media (max-width: 500px) {
       .about-page {
         padding: 1.5rem 1rem 3rem;
