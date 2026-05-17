@@ -272,68 +272,51 @@ text-decoration: none;
 
 .about-page {
   width: 100%;
-  padding: 40px 24px 80px;
-  box-sizing: border-box;
+  padding: 80px 20px;
 }
 
 .about-container {
-  width: 100%;
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
 .about-hero {
-  width: 100%;
-  padding: 48px;
-  border-radius: 20px;
-  background: linear-gradient(145deg, #0d1320, #121c2e);
-  border: 1px solid rgba(255,255,255,0.08);
-  margin-bottom: 32px;
-  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .about-subtitle {
-  display: inline-block;
-  color: #8ca7d8;
-  font-size: 14px;
+  display: block;
+  color: #999;
+  font-size: 13px;
   letter-spacing: 2px;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .about-hero h1 {
-  color: white;
   font-size: 42px;
-  margin: 0 0 18px;
+  margin-bottom: 24px;
 }
 
 .about-hero p {
-  color: rgba(255,255,255,0.75);
-  font-size: 17px;
-  line-height: 1.8;
-  max-width: 760px;
+  color: #cfcfcf;
+  line-height: 1.9;
+  margin-bottom: 18px;
 }
 
-.about-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-  width: 100%;
+.about-section {
+  border-top: 1px solid #222;
+  padding: 40px 0;
 }
 
-.about-card {
-  background: #111827;
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 18px;
-  padding: 32px;
-  transition: 0.25s ease;
+.about-section h2 {
+  font-size: 24px;
+  margin-bottom: 18px;
 }
 
-.about-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(140,167,216,0.35);
-}
-
-.about-card h2 {
+.about-section p {
+  color: #cfcfcf;
+  line-height: 1.9;
 }
 
 .footer-top {
