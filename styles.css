@@ -324,12 +324,11 @@ text-decoration: none;
         .divider2 {
             margin: 1.5rem 0;
             width: 100vw;
-            position: relative;
             left: 50%;
             right: 50%;
             margin-left: -50vw;
             margin-right: -50vw;
-            background-color: #dcd5c4;
+            background-color: #CDCDCD;
             height: 1px;
             border: none;
             display: block;
