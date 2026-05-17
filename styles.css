@@ -367,13 +367,13 @@ text-decoration: none;
     .about-mission-text {
       font-size: 1.15rem;
       font-style: normal;
-      color: #666;
+      color: #444;
       margin-bottom: 0.8rem;
     }
 
     .about-highlight {
       font-weight: 500;
-      color: #000000;
+      color: #444;
       background: #FFFFFF;
       padding: 0 0.2rem;
     }
@@ -387,7 +387,7 @@ text-decoration: none;
 
     .about-note {
       font-size: 0.95rem;
-      color: #444;
+      color: #666;
       margin-top: 0.3rem;
       font-style: italic;
       letter-spacing: 0.02em;
