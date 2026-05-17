@@ -370,7 +370,7 @@ text-decoration: none;
     .about-text {
       font-size: 16px;
       color: #444;
-      text-align: justify;
+      text-align: center;
       text-justify: inter-word;
       margin-bottom: 0.3rem;
     }
