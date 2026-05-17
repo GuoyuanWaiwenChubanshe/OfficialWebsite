@@ -368,7 +368,7 @@ text-decoration: none;
     }
 
     .about-text {
-      font-size: 1.1rem;
+      font-size: 16px;
       color: #444;
       text-align: justify;
       text-justify: inter-word;
@@ -415,7 +415,7 @@ text-decoration: none;
     }
 
     .about-note {
-      font-size: 0.95rem;
+      font-size: 13px              *;
       color: #666;
       margin-top: 0.3rem;
       font-style: italic;
@@ -429,7 +429,7 @@ text-decoration: none;
     }
 
     .about-list li {
-      font-size: 1.05rem;
+      font-size: 16px;
       margin-bottom: 0.5rem;
       padding-left: 1.6rem;
       position: relative;
