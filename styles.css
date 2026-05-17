@@ -386,6 +386,7 @@ text-decoration: none;
 }
 
     .about-mission-block {
+      font-size: 16px;
       background: #FFFFFF;
       padding: 1.5rem 1.5rem 1.2rem;
       border-left: 3px solid #CDCDCD;
@@ -394,7 +395,7 @@ text-decoration: none;
     }
 
     .about-mission-text {
-      font-size: 1.15rem;
+      font-size: 16px;
       font-style: normal;
       color: #444;
       margin-bottom: 0.8rem;
