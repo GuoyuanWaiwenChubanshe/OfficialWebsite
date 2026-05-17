@@ -380,6 +380,10 @@ text-decoration: none;
       color: #444;
     }
 
+.about a {
+  text-decoration: none;
+}
+
     .about-mission-block {
       background: #FFFFFF;
       padding: 1.5rem 1.5rem 1.2rem;
