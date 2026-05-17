@@ -2,6 +2,14 @@ h1 {
   text-align: center;
 }
 
+        h2 {
+            text-align: center;
+            font-weight: 400;
+            font-size: 1.6rem;
+            color: #000000;
+            margin-bottom: 0.6rem;
+            letter-spacing: 0.02em;
+        }
 p {
   text-align: center;
 }
@@ -288,6 +296,8 @@ text-decoration: none;
       width: 100%;
       padding: 2rem 1.5rem 4rem;
       min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
     }
 
     .about-container {
@@ -297,6 +307,8 @@ text-decoration: none;
       display: flex;
       flex-direction: column;
       gap: 2.2rem;
+      position: relative;
+      z-index: 1;
     }
 
     .about-title {
@@ -304,9 +316,31 @@ text-decoration: none;
       font-weight: 400;
       letter-spacing: 0.03em;
       color: #000000;
+      text-align: center;
       padding-bottom: 0.8rem;
       margin-bottom: 0.2rem;
     }
+
+        .divider2 {
+            margin: 1.5rem 0;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            background-color: #dcd5c4;
+            height: 1px;
+            border: none;
+            display: block;
+                      margin-top: 2rem;
+                      margin-bottom: 2rem;
+                      transform: translateX(-50%);
+        }
+
+        .divider2::before {
+            display: none;
+        }
 
     .about-subtitle {
       font-size: 1.2rem;
@@ -407,45 +441,21 @@ text-decoration: none;
       font-size: 1rem;
     }
 
-    @media (max-width: 500px) {
-      .about-page {
-        padding: 1.5rem 1rem 3rem;
-      }
-      .about-title {
-        font-size: 2rem;
-      }
-      .about-lede {
-        font-size: 1.2rem;
-      }
-    }
-
-    /* Full-width dividers that span the entire screen */
-    .about-divider {
-      border: none;
-      border-top: 1px solid #d2d6cb;
-      width: 100vw;
-      position: relative;
-      left: 50%;
-      right: 50%;
-      margin-left: -50vw;
-      margin-right: -50vw;
-      margin-top: 0.8rem;
-      margin-bottom: 1.2rem;
-    }
-
-    /* Full-width footer divider too */
-    .about-footer-divider {
-      border: none;
-      border-top: 1px solid #e2e3da;
-      width: 100vw;
-      position: relative;
-      left: 50%;
-      right: 50%;
-      margin-left: -50vw;
-      margin-right: -50vw;
-      margin-top: 1.5rem;
-      margin-bottom: 0;
-    }
+        @media (max-width: 700px) {
+            .about-container {
+                padding: 2rem 1.25rem 3rem 1.25rem;
+            }
+            .about-title {
+                font-size: 1.9rem;
+            }
+            .about-lede {
+                font-size: 1.2rem;
+                padding-left: 1rem;
+            }
+            .about-list {
+                margin-left: 0.2rem;
+            }
+        }
 
 .footer-top {
   background-color: #EE1C25;
