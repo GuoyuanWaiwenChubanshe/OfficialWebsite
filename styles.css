@@ -278,9 +278,7 @@ text-decoration: none;
     }
 
     .about-page {
-      font-family: 'Times New Roman', 'Songti SC', 'Noto Serif SC', '华文宋体', 'STSong', '宋体', Georgia, serif;
-      background-color: #fdfdf7;  /* warm paper white */
-      color: #2e2e2c;
+      color: #FFFFFF;
       line-height: 1.7;
       display: flex;
       flex-direction: column;
@@ -422,7 +420,7 @@ text-decoration: none;
     }
 
     .about-list li::before {
-      content: "❧";
+      content: "•";
       position: absolute;
       left: 0;
       color: #7f8c6b;
