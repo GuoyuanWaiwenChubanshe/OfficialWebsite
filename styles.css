@@ -324,11 +324,9 @@ text-decoration: none;
         .divider2 {
             margin: 1.5rem 0;
             width: 100vw;
-            position: absolute;
+            position: relative;
             left: 50%;
             right: 50%;
-            margin-left: -50vw;
-            margin-right: -50vw;
             background-color: #CDCDCD;
             height: 1px;
             border: none;
