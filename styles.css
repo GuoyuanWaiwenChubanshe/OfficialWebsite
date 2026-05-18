@@ -357,6 +357,10 @@ text-decoration: none;
       text-decoration: none;
     }
 
+    .about-section a{
+      text-decoration: none;
+    }
+
     .about-lede {
       font-size: 1.6rem;
       line-height: 1.6;
