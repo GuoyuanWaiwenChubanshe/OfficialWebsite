@@ -419,6 +419,11 @@ text-decoration: none;
       text-decoration: none;
     }
 
+    .about-link a{
+      color: red;
+      text-decoration: none;
+    }
+
     .about-note {
       font-size: 13px              *;
       color: #666;
