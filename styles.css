@@ -405,6 +405,10 @@ text-decoration: none;
       margin: 0.8rem 0 1rem;
     }
 
+    .about-mission-block a {
+     color: #444;
+}
+
     .about-mission-text {
       font-size: 16px;
       font-style: normal;
