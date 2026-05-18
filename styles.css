@@ -358,6 +358,12 @@ text-decoration: none;
     }
 
     .about-section a{
+      color: red;
+      text-decoration: none;
+    }
+
+    .about-section a:hover{
+      color: red;
       text-decoration: none;
     }
 
