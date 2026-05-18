@@ -406,6 +406,7 @@ text-decoration: none;
     }
 
     .about-mission-block a {
+     text-decoration: none;
      color: #444;
 }
 
