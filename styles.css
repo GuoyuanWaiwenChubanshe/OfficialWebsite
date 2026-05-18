@@ -411,7 +411,6 @@ text-decoration: none;
     .about-link {
       color: red;
       text-decoration: none;
-      transition: color 0.2s ease, text-decoration-color 0.2s;
       font-weight: 450;
     }
 
