@@ -354,6 +354,7 @@ text-decoration: none;
       display: flex;
       flex-direction: column;
       gap: 1.2rem;
+      text-decoration: none;
     }
 
     .about-lede {
