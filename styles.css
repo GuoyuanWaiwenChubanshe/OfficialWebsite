@@ -170,7 +170,7 @@ a {
       text-decoration: none;
     }
 
-    .books a{
+    .books a {
      text-decoration: none;
     }
 
@@ -208,6 +208,7 @@ a {
 
     .book-card {
       width: 277.5px;
+      height: 558.77px;
       text-decoration: none;
       color: black;
       transition: transform 0.2s ease;
