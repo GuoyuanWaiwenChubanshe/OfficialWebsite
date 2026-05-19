@@ -167,6 +167,10 @@ a {
 
     .books {
       padding: 40px 0;
+      text-decoration: none;
+    }
+
+    .books a{
     }
 
     .books h2 {
