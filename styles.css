@@ -190,7 +190,6 @@ a {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
       gap: 30px;
-      grid-auto-columns: 250px;
     }
 
     .book-grid-full {
@@ -212,6 +211,7 @@ a {
     .book-card img {
       width: 100%;
       border-radius: 6px;
+      max-height: 100%;
     }
 
     .book-meta {
