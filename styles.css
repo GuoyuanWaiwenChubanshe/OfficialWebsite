@@ -171,6 +171,7 @@ a {
     }
 
     .books a{
+     text-decoration: none;
     }
 
     .books h2 {
@@ -191,7 +192,6 @@ a {
     }
 
     .book-grid {
-      width: 277.5px;
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
       gap: 30px;
