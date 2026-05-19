@@ -199,6 +199,7 @@ a {
     }
 
     .book-card {
+      width: 277.5px;
       text-decoration: none;
       color: black;
       transition: transform 0.2s ease;
