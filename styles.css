@@ -386,6 +386,11 @@ text-decoration: none;
       text-decoration: none;
     }
 
+.about-section h2 {
+      text-decoration: none;
+      color: #000000;
+}
+
     .about-section a{
       color: red;
       text-decoration: none;
