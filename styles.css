@@ -176,10 +176,20 @@ a {
      text-decoration: none;
     }
 
+    .books a:hover {
+     text-decoration: none;
+     color: #000000;
+    }
+
     .books h2 {
       text-align: center;
       margin-bottom: 30px;
       text-decoration: none;
+    }
+
+    .books h2:hover {
+      text-decoration: none;
+      color: #000000;
     }
 
     .book-story {
