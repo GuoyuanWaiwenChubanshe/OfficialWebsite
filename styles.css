@@ -212,6 +212,7 @@ a {
       gap: 30px;
       justify-content: center;
       align-items: center;
+      text-align: center;
     }
 
     .book-grid-full {
@@ -226,8 +227,11 @@ a {
       text-decoration: none;
       color: black;
       transition: transform 0.2s ease;
-      justify-content: center;
-      align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     }
 
     .book-card:hover {
