@@ -240,10 +240,10 @@ a {
 
     .book-card img {
     display: block;
-    max-width: 160px;
-    max-height: 200px;
     object-fit: contain;
     margin-bottom: 20px;
+    width: 277.5px;
+    height: 448.77px;
 }
     }
 
