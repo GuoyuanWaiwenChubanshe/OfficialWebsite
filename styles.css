@@ -244,6 +244,28 @@ a {
       border-radius: 6px;
     }
 
+.book-card > * {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+.book-card h1,
+.book-card h2,
+.book-card h3,
+.book-card p,
+.book-card div {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+.book-card br {
+    display: block;
+    content: "";
+    margin: 0;
+}
+
     .book-meta {
       margin-top: 10px;
       height: 96.5px;
