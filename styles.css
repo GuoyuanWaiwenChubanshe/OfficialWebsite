@@ -223,8 +223,8 @@ a {
     }
 
     .book-card {
-      width: 277.5px;
-      height: 558.77px;
+      width: 317.5px;
+      height: 733.46px;
       text-decoration: none;
       transition: transform 0.2s ease;
     display: flex;
@@ -244,8 +244,8 @@ a {
     display: block;
     object-fit: cover;
     margin-bottom: 20px;
-    width: 277.5px;
-    height: 448.77px;
+    width: 317.5px;
+    height: 733.46px;
 }
 
 .book-card > * {
