@@ -239,9 +239,10 @@ a {
     }
 
     .book-card img {
-      width: 277.5px;
-      height: 448.77px;
-      border-radius: 6px;
+    max-width: 80%;
+    max-height: 200px;
+    object-fit: contain;
+    margin-bottom: 20px;
     }
 
 .book-card > * {
@@ -267,25 +268,26 @@ a {
 }
 
     .book-meta {
+    text-align: center;
+    width: 100%;
       margin-top: 10px;
       height: 96.5px;
-      overflow-wrap: break-word;
     }
+
+.book-meta p {
+    margin: 5px 0;
+}
 
     .book-meta .title {
       font-weight: bold;
+          margin-bottom: 8px;
     }
 
     .book-meta .author,
     .book-meta .year {
       font-size: 13px;
       color: #666;
-    }
-
-    .book-meta .desc {
-      font-size: 13px;
-      margin-top: 5px;
-      color: #444;
+          margin: 3px 0;
     }
 
 .book-card-full {
