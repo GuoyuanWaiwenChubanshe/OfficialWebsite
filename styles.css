@@ -241,7 +241,7 @@ a {
     .book-card img {
     display: block;
     object-fit: contain;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     width: 277.5px;
     height: 448.77px;
 }
