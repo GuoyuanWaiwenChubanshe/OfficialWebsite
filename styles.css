@@ -391,7 +391,7 @@ text-decoration: none;
       color: #000000;
 }
 
-    .about-section a{
+    .about-section a {
       color: red;
       text-decoration: none;
     }
@@ -400,6 +400,11 @@ text-decoration: none;
       color: red;
       text-decoration: none;
     }
+
+.headtext a {
+ color: #000000;
+        text-decoration: none;
+}
 
     .about-lede {
       font-size: 1.6rem;
