@@ -232,6 +232,8 @@ a {
     justify-content: center;
     align-items: center;
     text-align: center;
+          box-sizing: border-box;
+    padding: 20px;
     }
 
     .book-card:hover {
@@ -240,8 +242,8 @@ a {
 
     .book-card img {
     display: block;
-    object-fit: contain;
-    margin-bottom: 0px;
+    object-fit: cover;
+    margin-bottom: 20px;
     width: 277.5px;
     height: 448.77px;
 }
@@ -271,6 +273,10 @@ a {
     .book-meta {
     text-align: center;
     width: 100%;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .book-meta p {
