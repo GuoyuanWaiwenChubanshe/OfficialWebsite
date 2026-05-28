@@ -293,7 +293,6 @@ a {
   text-decoration: none;
   color: black;
   transition: transform 0.2s ease;
-
 }
 
 .book-card-full img {
@@ -304,7 +303,6 @@ a {
 
 .book-card-full:hover {
   transform: translateY(-5px);
-
 }
 
 .book-meta-full {
