@@ -213,6 +213,7 @@ a {
       justify-content: center;
       align-items: center;
       text-align: center;
+          justify-items: center;
     }
 
     .book-grid-full {
@@ -225,7 +226,6 @@ a {
       width: 277.5px;
       height: 558.77px;
       text-decoration: none;
-      color: black;
       transition: transform 0.2s ease;
     display: flex;
     flex-direction: column;
@@ -239,10 +239,12 @@ a {
     }
 
     .book-card img {
-    max-width: 80%;
+    display: block;
+    max-width: 160px;
     max-height: 200px;
     object-fit: contain;
     margin-bottom: 20px;
+}
     }
 
 .book-card > * {
@@ -270,12 +272,9 @@ a {
     .book-meta {
     text-align: center;
     width: 100%;
-      margin-top: 10px;
-      height: 96.5px;
-    }
 
 .book-meta p {
-    margin: 5px 0;
+    margin: 8px 0;
 }
 
     .book-meta .title {
