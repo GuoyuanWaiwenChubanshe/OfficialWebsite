@@ -396,12 +396,17 @@ text-decoration: none;
       text-decoration: none;
     }
 
-    .about-section a:hover{
+    .about-section a:hover {
       color: red;
       text-decoration: none;
     }
 
 .headtext a {
+ color: #000000;
+        text-decoration: none;
+}
+
+.headtext a:hover {
  color: #000000;
         text-decoration: none;
 }
