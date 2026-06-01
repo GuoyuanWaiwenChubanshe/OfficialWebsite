@@ -60,6 +60,162 @@
 
 <main>
 
+<section class="boomgaard-book-page">
+
+    <div class="boomgaard-book-layout">
+
+        <!-- BOOK IMAGE SLIDESHOW -->
+
+        <div class="boomgaard-gallery">
+
+            <div class="boomgaard-gallery-container">
+
+                <div class="boomgaard-gallery-slide active">
+                    <img src="/images/book-cover.jpg" alt="Book Cover">
+                </div>
+
+                <div class="boomgaard-gallery-slide">
+                    <img src="/images/book-back.jpg" alt="Book Back">
+                </div>
+
+                <div class="boomgaard-gallery-slide">
+                    <img src="/images/book-inside.jpg" alt="Book Interior">
+                </div>
+
+                <button class="boomgaard-gallery-prev">&#10094;</button>
+                <button class="boomgaard-gallery-next">&#10095;</button>
+
+            </div>
+
+        </div>
+
+        <!-- BOOK INFORMATION -->
+
+        <div class="boomgaard-book-information">
+
+            <div class="boomgaard-book-metadata">
+
+                <div class="boomgaard-metadata-item">
+                    <span class="boomgaard-metadata-label">书名</span>
+                    <h1>共产主义的未来</h1>
+                </div>
+
+                <div class="boomgaard-metadata-item">
+                    <span class="boomgaard-metadata-label">作者</span>
+                    <p>张三</p>
+                </div>
+
+                <div class="boomgaard-metadata-item">
+                    <span class="boomgaard-metadata-label">出版年份</span>
+                    <p>2026</p>
+                </div>
+
+                <div class="boomgaard-metadata-item">
+                    <span class="boomgaard-metadata-label">页数</span>
+                    <p>384 页</p>
+                </div>
+
+                <div class="boomgaard-metadata-item">
+                    <span class="boomgaard-metadata-label">ISBN</span>
+                    <p>978-0-000000-00-0</p>
+                </div>
+
+                <div class="boomgaard-metadata-item">
+                    <span class="boomgaard-metadata-label">语言</span>
+                    <p>中文</p>
+                </div>
+
+                <div class="boomgaard-metadata-item">
+                    <span class="boomgaard-metadata-label">译者</span>
+                    <p>李四</p>
+                </div>
+
+                <div class="boomgaard-metadata-item">
+                    <span class="boomgaard-metadata-label">出版社</span>
+                    <p>果园外文出版社</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MULTILINGUAL DESCRIPTION -->
+
+    <section class="boomgaard-description-section">
+
+        <div class="boomgaard-description-container">
+
+            <div class="boomgaard-description-slide active">
+
+                <h3>中文简介</h3>
+
+                <p>
+                    本书围绕现代社会的发展趋势展开讨论，
+                    结合历史经验与现实观察，
+                    分析社会主义与共产主义思想在当代世界中的意义、
+                    发展与实践可能性。
+                </p>
+
+            </div>
+
+            <div class="boomgaard-description-slide">
+
+                <h3>English Description</h3>
+
+                <p>
+                    This work explores contemporary social development,
+                    drawing on historical experience and present realities
+                    to examine the continuing relevance of socialist and
+                    communist thought in the modern world.
+                </p>
+
+            </div>
+
+            <div class="boomgaard-description-slide">
+
+                <h3>Nederlandse Beschrijving</h3>
+
+                <p>
+                    Dit werk onderzoekt de ontwikkeling van de moderne
+                    samenleving en bespreekt de blijvende betekenis van
+                    socialistische en communistische ideeën binnen de
+                    hedendaagse wereld.
+                </p>
+
+            </div>
+
+            <div class="boomgaard-description-slide">
+
+                <h3>Deutsche Beschreibung</h3>
+
+                <p>
+                    Dieses Werk untersucht die Entwicklung der modernen
+                    Gesellschaft und analysiert die Bedeutung sozialistischer
+                    und kommunistischer Ideen in der heutigen Welt.
+                </p>
+
+            </div>
+
+            <div class="boomgaard-description-controls">
+
+                <button class="boomgaard-description-prev">
+                    ←
+                </button>
+
+                <button class="boomgaard-description-next">
+                    →
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</section>
+
 </main>
   
 <footer>
@@ -83,4 +239,77 @@
   </div>
 </footer>
 </body>
+<script>
+
+const boomgaardGallerySlides =
+document.querySelectorAll('.boomgaard-gallery-slide');
+
+let boomgaardGalleryIndex = 0;
+
+function boomgaardShowGallery(index) {
+
+    boomgaardGallerySlides.forEach(slide => {
+        slide.classList.remove('active');
+    });
+
+    boomgaardGallerySlides[index].classList.add('active');
+}
+
+document.querySelector('.boomgaard-gallery-next')
+.addEventListener('click', () => {
+
+    boomgaardGalleryIndex =
+    (boomgaardGalleryIndex + 1) %
+    boomgaardGallerySlides.length;
+
+    boomgaardShowGallery(boomgaardGalleryIndex);
+});
+
+document.querySelector('.boomgaard-gallery-prev')
+.addEventListener('click', () => {
+
+    boomgaardGalleryIndex =
+    (boomgaardGalleryIndex - 1 +
+    boomgaardGallerySlides.length) %
+    boomgaardGallerySlides.length;
+
+    boomgaardShowGallery(boomgaardGalleryIndex);
+});
+
+const boomgaardDescriptionSlides =
+document.querySelectorAll('.boomgaard-description-slide');
+
+let boomgaardDescriptionIndex = 0;
+
+function boomgaardShowDescription(index) {
+
+    boomgaardDescriptionSlides.forEach(slide => {
+        slide.classList.remove('active');
+    });
+
+    boomgaardDescriptionSlides[index].classList.add('active');
+}
+
+document.querySelector('.boomgaard-description-next')
+.addEventListener('click', () => {
+
+    boomgaardDescriptionIndex =
+    (boomgaardDescriptionIndex + 1) %
+    boomgaardDescriptionSlides.length;
+
+    boomgaardShowDescription(boomgaardDescriptionIndex);
+});
+
+document.querySelector('.boomgaard-description-prev')
+.addEventListener('click', () => {
+
+    boomgaardDescriptionIndex =
+    (boomgaardDescriptionIndex - 1 +
+    boomgaardDescriptionSlides.length) %
+    boomgaardDescriptionSlides.length;
+
+    boomgaardShowDescription(boomgaardDescriptionIndex);
+});
+
+</script>
 </html>
