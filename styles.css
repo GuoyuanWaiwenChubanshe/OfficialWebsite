@@ -521,7 +521,7 @@ text-decoration: none;
     }
 
     .about-note {
-      font-size: 13px              *;
+      font-size: 13px;
       color: #666;
       margin-top: 0.3rem;
       font-style: italic;
@@ -595,22 +595,16 @@ text-decoration: none;
 
 .boomgaard-gallery-slide {
     display: none;
-  align-items: center;
-  justify-content: flex-start;
 }
 
 .boomgaard-gallery-slide.active {
     display: block;
-  align-items: center;
-  justify-content: flex-start;
 }
 
 .boomgaard-gallery-slide img {
     width: 100%;
     height: auto;
     display: block;
-  align-items: center;
-  justify-content: flex-start;
 }
 
 .boomgaard-gallery-prev,
@@ -711,7 +705,7 @@ text-decoration: none;
     border: 1px solid #CDCDCD;
     background: #ffffff;
     cursor: pointer;
-    margin-right: 10px;
+    margin: 10px;
 }
 
 .boomgaard-description-controls button:hover,
