@@ -577,12 +577,12 @@ text-decoration: none;
     grid-template-columns: 500px 1fr;
     gap: 70px;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .boomgaard-book-information {
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   max-width: 585px;
   max-height: 645.97px;
 }
@@ -598,7 +598,7 @@ text-decoration: none;
 .boomgaard-gallery-slide {
     display: none;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
       width: 498px;
     height: 704.42px;
 }
@@ -606,7 +606,7 @@ text-decoration: none;
 .boomgaard-gallery-slide.active {
     display: block;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
       width: 498px;
     height: 704.42px;
 }
@@ -653,7 +653,7 @@ text-decoration: none;
     padding-left: 25px;
     max-width: 585px;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     text-decoration: none;
 }
 
@@ -696,19 +696,19 @@ text-decoration: none;
     border-top: 1px solid #CDCDCD;
     padding-top: 40px;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .boomgaard-description-slide {
     display: none;
     align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .boomgaard-description-slide.active {
     display: block;
     align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .boomgaard-description-slide h3 {
