@@ -647,12 +647,22 @@ text-decoration: none;
     max-width: 585px;
     align-items: center;
     justify-content: flex-start;
+    text-decoration: none;
 }
 
 .boomgaard-book-metadata h1 {
     margin: 10px 0 30px;
     font-size: 2.3rem;
     font-weight: 600;
+}
+
+.boomgaard-book-metadata a {
+    text-decoration: none;
+}
+
+.boomgaard-book-metadata a:hover {
+    text-decoration: none;
+    color: #000000;
 }
 
 .boomgaard-metadata-item {
@@ -666,6 +676,7 @@ text-decoration: none;
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-bottom: 6px;
+    
 }
 
 .boomgaard-metadata-item p {
