@@ -574,16 +574,9 @@ text-decoration: none;
 
 .boomgaard-book-layout {
     display: grid;
-    grid-template-columns: 1fr 2px 1fr;
-    gap: 75px;
-}
-
-.boomgaard-center-divider {
-    position: static;
-    width: 2px;
-    height: auto;
-    background: #b32020;
-    transform: none;
+    grid-template-columns: 500px 1fr;
+    gap: 70px;
+    align-items: start;
 }
 
 .boomgaard-gallery-container {
