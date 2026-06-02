@@ -582,6 +582,7 @@ text-decoration: none;
 .boomgaard-book-information {
   align-items: center;
   justify-content: flex-start;
+      min-width: 0;
 }
 
 .boomgaard-gallery-container {
