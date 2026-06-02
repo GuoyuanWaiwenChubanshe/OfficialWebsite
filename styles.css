@@ -700,7 +700,8 @@ text-decoration: none;
 
 .boomgaard-description-slide h3 {
     margin-bottom: 20px;
-    font-size: 1.3rem;
+    font-size: 25.6px;
+        margin: 0 auto;
 }
 
 .boomgaard-description-slide p {
