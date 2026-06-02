@@ -579,6 +579,16 @@ text-decoration: none;
     align-items: start;
 }
 
+.boomgaard-center-divider {
+    position: absolute;
+    left: 50%;
+    top: 80px;
+    bottom: 80px;
+    width: 3px;
+    background: #b32020;
+    transform: translateX(-50%);
+}
+
 .boomgaard-gallery-container {
     position: relative;
     border: 1px solid #e5e5e5;
