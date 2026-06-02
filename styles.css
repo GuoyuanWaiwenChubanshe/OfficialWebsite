@@ -570,6 +570,8 @@ text-decoration: none;
     max-width: 1400px;
     margin: 0 auto;
     padding: 50px 25px;
+    position: relative;
+
 }
 
 .boomgaard-book-layout {
@@ -579,9 +581,13 @@ text-decoration: none;
 }
 
 .boomgaard-center-divider {
-    background: #b32020;
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    bottom: 50px;
     width: 3px;
-    align-self: stretch;
+    background: #b32020;
+    transform: translateX(-50%);
 }
 
 .boomgaard-gallery-container {
