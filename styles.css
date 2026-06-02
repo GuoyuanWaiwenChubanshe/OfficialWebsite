@@ -567,9 +567,9 @@ text-decoration: none;
         }
 
 .boomgaard-book-page {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 50px 25px;
+    padding: 50px 0px;
 }
 
 .boomgaard-book-layout {
@@ -587,15 +587,21 @@ text-decoration: none;
 
 .boomgaard-gallery-slide {
     display: none;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .boomgaard-gallery-slide.active {
     display: block;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .boomgaard-gallery-slide img {
     width: 100%;
     display: block;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .boomgaard-gallery-prev,
@@ -656,10 +662,14 @@ text-decoration: none;
 
 .boomgaard-description-slide {
     display: none;
+    align-items: center;
+  justify-content: flex-start;
 }
 
 .boomgaard-description-slide.active {
     display: block;
+    align-items: center;
+  justify-content: flex-start;
 }
 
 .boomgaard-description-slide h3 {
