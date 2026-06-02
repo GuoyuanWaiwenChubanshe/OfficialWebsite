@@ -570,63 +570,43 @@ text-decoration: none;
     max-width: 1200px;
     margin: 0 auto;
     padding: 50px 0px;
-    align-items: center;
-  justify-content: center;
 }
 
 .boomgaard-book-layout {
-        display: flex;
+    display: grid;
     grid-template-columns: 500px 1fr;
     gap: 70px;
-  align-items: center;
-  justify-content: center;
+    align-items: start;
 }
 
 .boomgaard-book-information {
   align-items: center;
-  justify-content: center;
-  max-width: 585px;
-  max-height: 645.97px;
+  justify-content: flex-start;
 }
 
 .boomgaard-gallery-container {
     position: relative;
     border: 1px solid #e5e5e5;
     background: #fff;
-        width: 498px;
-    height: 704.42px;
 }
 
 .boomgaard-gallery-slide {
     display: none;
   align-items: center;
-  justify-content: center;
-      width: 498px;
-    height: 704.42px;
+  justify-content: flex-start;
 }
 
 .boomgaard-gallery-slide.active {
     display: block;
   align-items: center;
-  justify-content: center;
-      width: 498px;
-    height: 704.42px;
+  justify-content: flex-start;
 }
 
 .boomgaard-gallery-slide img {
+    width: 100%;
     display: block;
-    object-fit: cover;
-    margin-bottom: 0px;
-    width: 498px;
-    height: 704.42px;
-}
-
-.boomgaard-gallery-slide.active img {
-    display: block;
-    object-fit: cover;
-    margin-bottom: 0px;
-    width: 498px;
-    height: 704.42px;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .boomgaard-gallery-prev,
@@ -636,7 +616,7 @@ text-decoration: none;
     transform: translateY(-50%);
     width: 42px;
     height: 42px;
-    border: 1px solid #CDCDCD;
+    border: 1px solid #dddddd;
     background: rgba(255,255,255,0.95);
     cursor: pointer;
     font-size: 18px;
@@ -654,9 +634,6 @@ text-decoration: none;
     border-left: 4px solid #EE1C25;
     padding-left: 25px;
     max-width: 585px;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
 }
 
 .boomgaard-book-metadata h1 {
@@ -665,27 +642,17 @@ text-decoration: none;
     font-weight: 600;
 }
 
-.boomgaard-book-metadata a {
-    text-decoration: none;
-}
-
-.boomgaard-book-metadata a:hover {
-    text-decoration: none;
-    color: #000000;
-}
-
 .boomgaard-metadata-item {
     margin-bottom: 22px;
 }
 
 .boomgaard-metadata-label {
     display: block;
-    color: #666;
+    color: #777777;
     font-size: 13px;
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-bottom: 6px;
-    
 }
 
 .boomgaard-metadata-item p {
@@ -695,22 +662,20 @@ text-decoration: none;
 
 .boomgaard-description-section {
     margin-top: 70px;
-    border-top: 1px solid #CDCDCD;
+    border-top: 1px solid #e5e5e5;
     padding-top: 40px;
-    align-items: center;
-    justify-content: center;
 }
 
 .boomgaard-description-slide {
     display: none;
     align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .boomgaard-description-slide.active {
     display: block;
     align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .boomgaard-description-slide h3 {
@@ -729,7 +694,7 @@ text-decoration: none;
 .boomgaard-description-controls button {
     width: 42px;
     height: 42px;
-    border: 1px solid #CDCDCD;
+    border: 1px solid #dddddd;
     background: #ffffff;
     cursor: pointer;
     margin-right: 10px;
@@ -738,7 +703,7 @@ text-decoration: none;
 .boomgaard-description-controls button:hover,
 .boomgaard-gallery-prev:hover,
 .boomgaard-gallery-next:hover {
-    border-color: #EE1C25;
+    border-color: #b32020;
 }
 
 @media (max-width: 1000px) {
