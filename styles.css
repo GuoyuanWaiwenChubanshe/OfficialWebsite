@@ -655,6 +655,16 @@ text-decoration: none;
     margin-bottom: 6px;
 }
 
+.boomgaard-metadata-label a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.underline a {
+    text-decoration: none;
+    color: #000000;
+}
+
 .boomgaard-metadata-item p {
     margin: 0;
     line-height: 1.6;
@@ -718,6 +728,8 @@ text-decoration: none;
     }
 
 }
+
+
 
 .footer-top {
   background-color: #EE1C25;
