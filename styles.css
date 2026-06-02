@@ -589,8 +589,7 @@ text-decoration: none;
     position: relative;
     border: 1px solid #e5e5e5;
     background: #fff;
-      width: 500px;
-    max-width: 100%;
+    width: min(500px, 100%);
     margin: 0 auto;
 }
 
@@ -632,7 +631,7 @@ text-decoration: none;
 .boomgaard-book-metadata {
     border-left: 4px solid #EE1C25;
     padding-left: 25px;
-    max-width: 585px;
+    width: min(585px, 100%);
 }
 
 .boomgaard-book-metadata h1 {
