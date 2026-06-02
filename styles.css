@@ -632,6 +632,7 @@ text-decoration: none;
     border-left: 4px solid #EE1C25;
     padding-left: 25px;
     width: min(585px, 100%);
+      margin: 0 auto;
 }
 
 .boomgaard-book-metadata h1 {
