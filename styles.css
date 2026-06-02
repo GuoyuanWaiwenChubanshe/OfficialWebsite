@@ -582,6 +582,8 @@ text-decoration: none;
 .boomgaard-book-information {
   align-items: center;
   justify-content: flex-start;
+  max-width: 585px;
+  max-height: 645.97px;
 }
 
 .boomgaard-gallery-container {
