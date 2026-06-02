@@ -631,7 +631,7 @@ text-decoration: none;
     transform: translateY(-50%);
     width: 42px;
     height: 42px;
-    border: 1px solid #dddddd;
+    border: 1px solid #CDCDCD;
     background: rgba(255,255,255,0.95);
     cursor: pointer;
     font-size: 18px;
@@ -724,7 +724,7 @@ text-decoration: none;
 .boomgaard-description-controls button {
     width: 42px;
     height: 42px;
-    border: 1px solid #EE1C25;
+    border: 1px solid #CDCDCD;
     background: #ffffff;
     cursor: pointer;
     margin-right: 10px;
@@ -733,7 +733,7 @@ text-decoration: none;
 .boomgaard-description-controls button:hover,
 .boomgaard-gallery-prev:hover,
 .boomgaard-gallery-next:hover {
-    border-color: #b32020;
+    border-color: #EE1C25;
 }
 
 @media (max-width: 1000px) {
