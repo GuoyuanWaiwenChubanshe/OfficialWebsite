@@ -572,6 +572,7 @@ text-decoration: none;
     padding: 50px 0px;
     align-items: center;
   justify-content: center;
+      display: flex;
 }
 
 .boomgaard-book-layout {
