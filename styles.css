@@ -596,12 +596,16 @@ text-decoration: none;
     display: none;
   align-items: center;
   justify-content: flex-start;
+      width: 498px;
+    height: 704.42px;
 }
 
 .boomgaard-gallery-slide.active {
     display: block;
   align-items: center;
   justify-content: flex-start;
+      width: 498px;
+    height: 704.42px;
 }
 
 .boomgaard-gallery-slide img {
