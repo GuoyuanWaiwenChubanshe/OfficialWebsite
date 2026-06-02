@@ -675,7 +675,7 @@ text-decoration: none;
 
 .boomgaard-metadata-label {
     display: block;
-    color: #777777;
+    color: #666;
     font-size: 13px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -690,7 +690,7 @@ text-decoration: none;
 
 .boomgaard-description-section {
     margin-top: 70px;
-    border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #CDCDCD;
     padding-top: 40px;
     align-items: center;
     justify-content: flex-start;
@@ -724,7 +724,7 @@ text-decoration: none;
 .boomgaard-description-controls button {
     width: 42px;
     height: 42px;
-    border: 1px solid #dddddd;
+    border: 1px solid #EE1C25;
     background: #ffffff;
     cursor: pointer;
     margin-right: 10px;
