@@ -628,6 +628,7 @@ text-decoration: none;
 .boomgaard-book-metadata {
     border-left: 4px solid #EE1C25;
     padding-left: 25px;
+    max-width: 585px;
 }
 
 .boomgaard-book-metadata h1 {
