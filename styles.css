@@ -605,11 +605,14 @@ text-decoration: none;
 }
 
 .boomgaard-gallery-slide img {
-    width: 100%;
     display: block;
-  align-items: center;
-  justify-content: flex-start;
+    object-fit: cover;
+    margin-bottom: 0px;
+    width: 317.5px;
+    height: 623.46px;
 }
+
+
 
 .boomgaard-gallery-prev,
 .boomgaard-gallery-next {
