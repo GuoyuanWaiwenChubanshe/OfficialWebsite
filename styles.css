@@ -608,11 +608,17 @@ text-decoration: none;
     display: block;
     object-fit: cover;
     margin-bottom: 0px;
-    width: 317.5px;
-    height: 623.46px;
+    width: 498px;
+    height: 704.42px;
 }
 
-
+.boomgaard-gallery-slide.active img {
+    display: block;
+    object-fit: cover;
+    margin-bottom: 0px;
+    width: 498px;
+    height: 704.42px;
+}
 
 .boomgaard-gallery-prev,
 .boomgaard-gallery-next {
