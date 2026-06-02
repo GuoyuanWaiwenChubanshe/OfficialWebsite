@@ -642,6 +642,12 @@ text-decoration: none;
 
 .boomgaard-metadata-item {
     margin-bottom: 22px;
+  text-decoration: none;
+}
+
+.boomgaard-metadata-item a {
+  text-decoration: none;
+      color: #000000;
 }
 
 .boomgaard-metadata-label {
@@ -658,7 +664,12 @@ text-decoration: none;
     color: #000000;
 }
 
-.underline a {
+.cy-effective-orcid-url.underline a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.cy-effective-orcid-url-underline a {
     text-decoration: none;
     color: #000000;
 }
