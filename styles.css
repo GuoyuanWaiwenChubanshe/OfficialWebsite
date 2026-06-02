@@ -709,6 +709,10 @@ text-decoration: none;
 
 .boomgaard-description-controls {
     margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 .boomgaard-description-controls button {
@@ -717,7 +721,7 @@ text-decoration: none;
     border: 1px solid #CDCDCD;
     background: #ffffff;
     cursor: pointer;
-    margin: 10px;
+    margin: 0;
 }
 
 .boomgaard-description-controls button:hover,
