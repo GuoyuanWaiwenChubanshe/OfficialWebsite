@@ -323,30 +323,17 @@ Am Ende dieser Facharbeit werde ich alle Teilfragen erläutert und beantwortet h
 
             </div>
 
-<div class="boomgaard-description-controls">
+            <div class="boomgaard-description-controls">
 
-    <button class="boomgaard-description-prev">
-        ←
-    </button>
+                <button class="boomgaard-description-prev">
+                    ←
+                </button>
 
-    <button class="boomgaard-description-language">
-        <span class="language-icon">文A</span>
-    </button>
+                <button class="boomgaard-description-next">
+                    →
+                </button>
 
-    <div class="boomgaard-description-dots">
-
-        <button class="boomgaard-description-dot active" data-slide="0"></button>
-        <button class="boomgaard-description-dot" data-slide="1"></button>
-        <button class="boomgaard-description-dot" data-slide="2"></button>
-        <button class="boomgaard-description-dot" data-slide="3"></button>
-
-    </div>
-
-    <button class="boomgaard-description-next">
-        →
-    </button>
-
-</div>
+            </div>
 
         </div>
 
@@ -449,44 +436,5 @@ document.querySelector('.boomgaard-description-prev')
     boomgaardShowDescription(boomgaardDescriptionIndex);
 });
 
-  const languageButton =
-document.querySelector('.boomgaard-description-language');
-
-const languageIcons = [
-    '中', // page 0
-    'NL', // page 1
-    'EN', // page 2
-    'DE'  // page 3
-];
-
-function boomgaardShowDescription(index) {
-
-    boomgaardDescriptionSlides.forEach(slide => {
-        slide.classList.remove('active');
-    });
-
-    boomgaardDescriptionDots.forEach(dot => {
-        dot.classList.remove('active');
-    });
-
-    boomgaardDescriptionSlides[index].classList.add('active');
-    boomgaardDescriptionDots[index].classList.add('active');
-
-    languageButton.innerHTML =
-        `<span class="language-icon">${languageIcons[index]}</span>`;
-
-    boomgaardDescriptionIndex = index;
-}
-
-languageButton.addEventListener('click', () => {
-
-    boomgaardDescriptionIndex =
-    (boomgaardDescriptionIndex + 1) %
-    boomgaardDescriptionSlides.length;
-
-    boomgaardShowDescription(boomgaardDescriptionIndex);
-
-});
-  
 </script>
 </html>
