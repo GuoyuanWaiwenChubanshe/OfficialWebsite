@@ -338,7 +338,6 @@ text-decoration: none;
   color: #444;
 }
 
-    /* Scoped, independent classes for the About page – no overlap with existing styles */
     .about-page * {
       margin: 0;
       padding: 0;
