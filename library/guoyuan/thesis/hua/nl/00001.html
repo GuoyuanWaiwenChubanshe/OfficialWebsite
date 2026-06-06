@@ -323,17 +323,36 @@ Am Ende dieser Facharbeit werde ich alle Teilfragen erläutert und beantwortet h
 
             </div>
 
-            <div class="boomgaard-description-controls">
+<div class="boomgaard-description-controls">
 
-                <button class="boomgaard-description-prev">
-                    ←
-                </button>
+    <button class="boomgaard-description-prev">
+        ←
+    </button>
 
-                <button class="boomgaard-description-next">
-                    →
-                </button>
+    <div class="boomgaard-language-navigation">
 
-            </div>
+        <button
+            class="boomgaard-translate-button"
+            id="languageButton"
+            aria-label="Change language"
+        >
+            中文
+        </button>
+
+        <div class="boomgaard-language-dots">
+            <span class="boomgaard-dot active" data-slide="0"></span>
+            <span class="boomgaard-dot" data-slide="1"></span>
+            <span class="boomgaard-dot" data-slide="2"></span>
+            <span class="boomgaard-dot" data-slide="3"></span>
+        </div>
+
+    </div>
+
+    <button class="boomgaard-description-next">
+        →
+    </button>
+
+</div>
 
         </div>
 
@@ -415,6 +434,36 @@ function boomgaardShowDescription(index) {
     boomgaardDescriptionSlides[index].classList.add('active');
 }
 
+const boomgaardLanguages = [
+    '中文',
+    'EN',
+    'NL',
+    'DE'
+];
+
+function boomgaardUpdateLanguageUI(index) {
+
+    const languageButton =
+    document.getElementById('languageButton');
+
+    if (languageButton) {
+        languageButton.textContent =
+        boomgaardLanguages[index];
+    }
+
+    document
+    .querySelectorAll('.boomgaard-dot')
+    .forEach(dot => {
+        dot.classList.remove('active');
+    });
+
+    document
+    .querySelector(
+        `.boomgaard-dot[data-slide="${index}"]`
+    )
+    ?.classList.add('active');
+}
+
 document.querySelector('.boomgaard-description-next')
 .addEventListener('click', () => {
 
@@ -422,7 +471,13 @@ document.querySelector('.boomgaard-description-next')
     (boomgaardDescriptionIndex + 1) %
     boomgaardDescriptionSlides.length;
 
-    boomgaardShowDescription(boomgaardDescriptionIndex);
+    boomgaardShowDescription(
+        boomgaardDescriptionIndex
+    );
+
+    boomgaardUpdateLanguageUI(
+        boomgaardDescriptionIndex
+    );
 });
 
 document.querySelector('.boomgaard-description-prev')
@@ -433,8 +488,18 @@ document.querySelector('.boomgaard-description-prev')
     boomgaardDescriptionSlides.length) %
     boomgaardDescriptionSlides.length;
 
-    boomgaardShowDescription(boomgaardDescriptionIndex);
+    boomgaardShowDescription(
+        boomgaardDescriptionIndex
+    );
+
+    boomgaardUpdateLanguageUI(
+        boomgaardDescriptionIndex
+    );
 });
+
+boomgaardShowGallery(0);
+boomgaardShowDescription(0);
+boomgaardUpdateLanguageUI(0);
 
 </script>
 </html>
