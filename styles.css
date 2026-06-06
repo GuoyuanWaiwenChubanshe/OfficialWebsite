@@ -291,9 +291,14 @@ a {
     .book-meta .author,
     .book-meta .year {
       font-size: 13px;
-      color: #666;
+      color: #444;
           margin: 3px 0;
     }
+
+.book-meta .desc {
+  font-size: 8px;
+  color: #666;
+}
 
 .book-card-full {
   text-decoration: none;
