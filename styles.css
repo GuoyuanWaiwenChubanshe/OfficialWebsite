@@ -736,6 +736,54 @@ text-decoration: none;
     border-color: #EE1C25;
 }
 
+.boomgaard-description-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.boomgaard-language-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.boomgaard-translate-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    font-size: 15px;
+    font-weight: 600;
+    color: inherit;
+
+    padding: 0;
+    margin: 0;
+
+    line-height: 1;
+}
+
+.boomgaard-language-dots {
+    display: flex;
+    gap: 5px;
+    margin-top: 6px;
+}
+
+.boomgaard-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #bfbfbf;
+    transition: all 0.2s ease;
+}
+
+.boomgaard-dot.active {
+    background: #EE1C25;
+    transform: scale(1.2);
+}
+
 @media (max-width: 1000px) {
 
     .boomgaard-book-layout {
