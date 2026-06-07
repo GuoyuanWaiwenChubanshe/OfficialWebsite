@@ -285,7 +285,6 @@ a {
 
     .book-meta .title {
       font-weight: bold;
-          margin-bottom: 8px;
     }
 
     .book-meta .author,
@@ -297,7 +296,7 @@ a {
 
 .book-meta .desc {
   font-size: 8px;
-  margin: 0px;
+  margin-bottom: 8px;
   color: #666;
   font-style: italic;
 }
