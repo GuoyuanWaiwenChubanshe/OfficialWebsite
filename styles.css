@@ -685,39 +685,22 @@ text-decoration: none;
     line-height: 1.6;
 }
 
-.boomgaard-description-container {
-    position: relative;
-    min-height: 700px;
-}
-
 .boomgaard-description-section {
     margin-top: 70px;
     border-top: 1px solid #CDCDCD;
     padding-top: 40px;
-    min-height: 500px;
 }
 
 .boomgaard-description-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-
-    transition: opacity 0.3s ease;
-      padding-bottom: 250px;
-    box-sizing: border-box;
+    display: none;
+    align-items: center;
+  justify-content: flex-start;
 }
 
 .boomgaard-description-slide.active {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-      padding-bottom: 250px;
-    box-sizing: border-box;
+    display: block;
+    align-items: center;
+  justify-content: flex-start;
 }
 
 .boomgaard-description-slide h3 {
@@ -731,17 +714,11 @@ text-decoration: none;
 }
 
 .boomgaard-description-controls {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-
+    margin-top: 30px;
     display: flex;
-    align-items: flex-start;
     justify-content: center;
+    align-items: center;
     gap: 20px;
-
-    width: fit-content;
 }
 
 .boomgaard-description-controls button {
