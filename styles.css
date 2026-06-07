@@ -280,11 +280,12 @@ a {
 }
 
 .book-meta p {
-    margin: 8px 0;
+    margin: 0px;
 }
 
     .book-meta .title {
       font-weight: bold;
+          margin: 0px;
     }
 
     .book-meta .author,
