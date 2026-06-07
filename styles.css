@@ -708,12 +708,16 @@ text-decoration: none;
     pointer-events: none;
 
     transition: opacity 0.3s ease;
+      padding-bottom: 250px;
+    box-sizing: border-box;
 }
 
 .boomgaard-description-slide.active {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+      padding-bottom: 250px;
+    box-sizing: border-box;
 }
 
 .boomgaard-description-slide h3 {
