@@ -652,10 +652,6 @@ text-decoration: none;
     margin-bottom: 0px;
 }
 
-.boomgaard-title-group h1 {
-    margin-bottom: 6px;
-}
-
 h1.boomgaard-alt-title {
     font-size: 16px;
     margin-botom: 6px;
@@ -665,6 +661,9 @@ h1.boomgaard-alt-title {
     color: #666;
 }
 
+h1.boomgaard-alt-title a{
+    color: #666;
+}
 
 .boomgaard-metadata-divider {
     width: 100%;
