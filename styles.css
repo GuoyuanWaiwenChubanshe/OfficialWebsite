@@ -649,8 +649,7 @@ text-decoration: none;
 }
 
 .boomgaard-title-group .boomgaard-metadata-item {
-    margin-bottom: 10px;
-    border-bottom: 1px solid #CDCDCD;
+    margin-bottom: 0px;
 }
 
 .boomgaard-title-group h1 {
