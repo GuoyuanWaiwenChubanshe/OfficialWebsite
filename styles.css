@@ -659,6 +659,11 @@ text-decoration: none;
     font-size: 16px;
 }
 
+.boomgaard-alt-title h1 {
+    font-size: 16px;
+}
+
+
 .boomgaard-metadata-divider {
     width: 100%;
     height: 1px;
