@@ -683,13 +683,22 @@ h1.boomgaard-alt-title a{
       color: #000000;
 }
 
+.boomgaard-metadata-label-alt {
+    display: block;
+    color: #666;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 12px;
+}
+
 .boomgaard-metadata-label {
     display: block;
     color: #666;
     font-size: 13px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    margin-top: 6px;
+    margin-bottom: 6px;
 }
 
 .boomgaard-metadata-label a {
