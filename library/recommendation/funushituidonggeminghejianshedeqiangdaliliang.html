@@ -223,8 +223,72 @@ function boomgaardShowDescription(index) {
     boomgaardDescriptionSlides[index].classList.add('active');
 }
 
+const boomgaardLanguages = [
+    '中文',
+    'EN',
+    'NL',
+    'DE'
+];
+
+function boomgaardUpdateLanguageUI(index) {
+
+    const languageButton =
+    document.getElementById('languageButton');
+
+    if (languageButton) {
+        languageButton.textContent =
+        boomgaardLanguages[index];
+    }
+
+    document
+    .querySelectorAll('.boomgaard-dot')
+    .forEach(dot => {
+        dot.classList.remove('active');
+    });
+
+    document
+    .querySelector(
+        `.boomgaard-dot[data-slide="${index}"]`
+    )
+    ?.classList.add('active');
+}
+
+document.querySelector('.boomgaard-description-next')
+.addEventListener('click', () => {
+
+    boomgaardDescriptionIndex =
+    (boomgaardDescriptionIndex + 1) %
+    boomgaardDescriptionSlides.length;
+
+    boomgaardShowDescription(
+        boomgaardDescriptionIndex
+    );
+
+    boomgaardUpdateLanguageUI(
+        boomgaardDescriptionIndex
+    );
+});
+
+document.querySelector('.boomgaard-description-prev')
+.addEventListener('click', () => {
+
+    boomgaardDescriptionIndex =
+    (boomgaardDescriptionIndex - 1 +
+    boomgaardDescriptionSlides.length) %
+    boomgaardDescriptionSlides.length;
+
+    boomgaardShowDescription(
+        boomgaardDescriptionIndex
+    );
+
+    boomgaardUpdateLanguageUI(
+        boomgaardDescriptionIndex
+    );
+});
 
 boomgaardShowGallery(0);
+boomgaardShowDescription(0);
+boomgaardUpdateLanguageUI(0);
 
 </script>
 </html>
