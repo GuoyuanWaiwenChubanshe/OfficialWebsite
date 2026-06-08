@@ -648,11 +648,11 @@ text-decoration: none;
 }
 
 .boomgaard-title-group .boomgaard-metadata-item {
-    margin-bottom: 0;
+    margin-bottom: 0px;
 }
 
 .boomgaard-title-group h1 {
-    margin: 10px 0;
+    margin-bottom: 6px;
 }
 
 .boomgaard-alt-title {
