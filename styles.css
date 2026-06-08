@@ -680,6 +680,11 @@ text-decoration: none;
   text-decoration: none;
 }
 
+.boomgaard-metadata-item-alt {
+    margin: 0px;
+  text-decoration: none;
+}
+
 .boomgaard-metadata-item a {
   text-decoration: none;
       color: #000000;
