@@ -658,16 +658,19 @@ text-decoration: none;
 .boomgaard-alt-title {
     font-size: 16px;
   font-weight: normal;
+  letter-spacing: normal;
 }
 
 .boomgaard-alt-title h1 {
     font-size: 16px;
  font-weight: normal;
+  letter-spacing: normal;
 }
 
 .boomgaard-alt-title a {
     font-size: 16px;
   font-weight: normal;
+  letter-spacing: normal;
 }
 
 
