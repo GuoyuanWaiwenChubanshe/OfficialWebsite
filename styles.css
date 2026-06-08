@@ -688,6 +688,7 @@ text-decoration: none;
 
 .boomgaard-description-section {
     margin-top: 70px;
+    border-top: 1px solid #CDCDCD;
     padding-top: 40px;
 }
 
