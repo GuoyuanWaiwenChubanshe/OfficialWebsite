@@ -649,10 +649,12 @@ text-decoration: none;
 
 .boomgaard-title-group .boomgaard-metadata-item {
     margin-bottom: 0;
+    letter-spacing: normal;
 }
 
 .boomgaard-title-group h1 {
     margin: 10px 0;
+    letter-spacing: normal;
 }
 
 .boomgaard-alt-title {
