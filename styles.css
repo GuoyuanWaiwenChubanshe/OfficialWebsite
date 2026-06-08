@@ -673,12 +673,12 @@ h1.boomgaard-alt-title a{
 }
 
 .boomgaard-metadata-item {
-    margin-bottom: 22px;
   text-decoration: none;
 }
 
 .boomgaard-metadata-item a {
   text-decoration: none;
+  margin-bottom: 6px;
       color: #000000;
 }
 
