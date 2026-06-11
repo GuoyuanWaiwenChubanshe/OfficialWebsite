@@ -894,6 +894,45 @@ text-decoration: none;
 
 }
 
+@media (max-width: 768px) {
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+        padding: 12px 0;
+    }
+
+    .boomgaard-language-button {
+        font-size: 13px;
+        padding: 12px 8px;
+    }
+
+    .boomgaard-language-dropdown a {
+        font-size: 13px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .nav-links {
+        gap: 8px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .boomgaard-language-button {
+        font-size: 11px;
+        padding: 10px 6px;
+    }
+
+}
+
 
 
 .footer-top {
