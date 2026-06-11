@@ -80,8 +80,6 @@ main {
 .boomgaard-language-button {
     background: transparent;
     border: none;
-    color: inherit;
-    font: inherit;
     cursor: pointer;
     padding: 0.75rem 1rem;
     transition: opacity 0.2s ease;
@@ -106,13 +104,13 @@ main {
 .boomgaard-language-dropdown a {
     display: block;
     padding: 0.75rem 1rem;
-    color: #666;
+    color: #000000;
     text-decoration: none;
     transition: background 0.15s ease;
 }
 
 .boomgaard-language-dropdown a:hover {
-    background: #EE1C25;
+    color: #EE1C25;
 }
 
 .boomgaard-language-selector:hover .boomgaard-language-dropdown {
