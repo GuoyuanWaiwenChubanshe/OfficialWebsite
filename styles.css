@@ -78,6 +78,7 @@ main {
 }
 
 .boomgaard-language-button {
+    color: #000000;
     background: transparent;
     border: none;
     cursor: pointer;
