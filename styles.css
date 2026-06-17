@@ -682,6 +682,7 @@ text-decoration: none;
     border: 1px solid #CDCDCD;
     padding: 3rem;
     position: relative;
+    text-align: center;
 }
 
 .boomgaard-contact-about::before {
@@ -721,7 +722,7 @@ text-decoration: none;
 .boomgaard-contact-about-text {
     margin: 0;
     line-height: 2;
-    text-align: justify;
+    text-align: center;
     color: #333;
 }
 
