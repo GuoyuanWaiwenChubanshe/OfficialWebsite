@@ -623,6 +623,166 @@ text-decoration: none;
             }
         }
 
+.boomgaard-contact-main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.boomgaard-contact-hero {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.boomgaard-contact-hero-marker {
+    width: 90px;
+    height: 4px;
+    background: #b22222;
+    margin: 0 auto 1.5rem;
+}
+
+.boomgaard-contact-hero-kicker {
+    display: block;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    color: #888;
+    text-transform: uppercase;
+}
+
+.boomgaard-contact-hero-title {
+    margin: 0.75rem 0;
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.boomgaard-contact-hero-text {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 2;
+    color: #555;
+}
+
+.boomgaard-contact-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 2.2fr) minmax(300px, 0.8fr);
+    gap: 2rem;
+    align-items: start;
+}
+
+.boomgaard-contact-about {
+    background: #ffffff;
+    border: 1px solid #d9d9d9;
+    padding: 3rem;
+    position: relative;
+}
+
+.boomgaard-contact-about::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    background: #b22222;
+}
+
+.boomgaard-contact-about-header {
+    margin-bottom: 2rem;
+}
+
+.boomgaard-contact-about-kicker {
+    display: block;
+    color: #888;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.boomgaard-contact-about-title {
+    margin: 0.4rem 0 0;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.boomgaard-contact-about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.boomgaard-contact-about-text {
+    margin: 0;
+    line-height: 2;
+    text-align: justify;
+    color: #333;
+}
+
+.boomgaard-contact-about-footer {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e6e6e6;
+}
+
+.boomgaard-contact-about-link {
+    text-decoration: none;
+    color: #b22222;
+    font-weight: 500;
+}
+
+.boomgaard-contact-sidebar {
+    position: sticky;
+    top: 2rem;
+}
+
+.boomgaard-contact-card {
+    background: #ffffff;
+    border: 1px solid #d9d9d9;
+    padding: 2rem;
+}
+
+.boomgaard-contact-card-title {
+    margin: 0 0 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.boomgaard-contact-item {
+    margin-bottom: 1.5rem;
+}
+
+.boomgaard-contact-label {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: #888;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+}
+
+.boomgaard-contact-value {
+    color: #222;
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+
+    .boomgaard-contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .boomgaard-contact-sidebar {
+        position: static;
+    }
+
+    .boomgaard-contact-about {
+        padding: 2rem;
+    }
+
+    .boomgaard-contact-hero-title {
+        font-size: 2.2rem;
+    }
+
+}
+
 .boomgaard-book-page {
     max-width: 1200px;
     margin: 0 auto;
