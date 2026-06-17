@@ -728,12 +728,24 @@ text-decoration: none;
 .boomgaard-contact-about-footer {
     margin-top: 2rem;
     padding-top: 1.5rem;
-    border-top: 1px solid #e6e6e6;
+    border-top: 1px solid #CDCDCD;
 }
 
 .boomgaard-contact-about-link {
     text-decoration: none;
-    color: #b22222;
+    color: #EE1C25;
+    font-weight: 500;
+}
+
+.boomgaard-contact-about-link a {
+    text-decoration: none;
+    color: #EE1C25;
+    font-weight: 500;
+}
+
+.boomgaard-contact-about-link a:hover {
+    text-decoration: none;
+    color: #EE1C25;
     font-weight: 500;
 }
 
