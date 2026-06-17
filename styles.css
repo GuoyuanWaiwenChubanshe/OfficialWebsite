@@ -489,6 +489,13 @@ text-decoration: none;
       text-decoration: none;
     }
 
+.headtext h1,
+.headtext h2,
+.headtext h3,{
+      font-size: 25.6px
+      font-weight: 100;
+}
+
 .headtext a {
  color: #000000;
         text-decoration: none;
@@ -644,21 +651,21 @@ text-decoration: none;
 
 .boomgaard-contact-hero-title {
     margin: 0.75rem 0;
-    font-size: 32px;
+    font-size: 25.6px;
     font-weight: 400;
     text-decoration: none;
 }
 
 .boomgaard-contact-hero-title h1 {
     margin: 0.75rem 0;
-    font-size: 32px;
+    font-size: 25.6px;
     font-weight: 400;
     text-decoration: none;
 }
 
 .boomgaard-contact-hero-title h2 {
     margin: 0.75rem 0;
-    font-size: 32px;
+    font-size: 25.6px;
     font-weight: 400;
     text-decoration: none;
 }
@@ -709,7 +716,7 @@ text-decoration: none;
 
 .boomgaard-contact-about-title {
     margin: 0.4rem 0 0;
-    font-size: 2rem;
+    font-size: 25.6px;
     font-weight: 400;
 }
 
@@ -775,7 +782,7 @@ text-decoration: none;
 
 .boomgaard-contact-card-title {
     margin: 0 0 1.5rem;
-    font-size: 1.4rem;
+    font-size: 25.6px;
     font-weight: 400;
 }
 
