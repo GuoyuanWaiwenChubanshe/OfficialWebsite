@@ -679,7 +679,7 @@ text-decoration: none;
 
 .boomgaard-contact-about {
     background: #ffffff;
-    border: 1px solid #d9d9d9;
+    border: 1px solid #CDCDCD;
     padding: 3rem;
     position: relative;
 }
@@ -700,7 +700,7 @@ text-decoration: none;
 
 .boomgaard-contact-about-kicker {
     display: block;
-    color: #888;
+    color: #666;
     font-size: 0.8rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -761,7 +761,7 @@ text-decoration: none;
 .boomgaard-contact-label {
     display: block;
     margin-bottom: 0.35rem;
-    color: #888;
+    color: #666;
     font-size: 0.85rem;
     letter-spacing: 0.08em;
 }
