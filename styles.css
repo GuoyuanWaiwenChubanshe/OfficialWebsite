@@ -776,8 +776,21 @@ text-decoration: none;
 }
 
 .boomgaard-contact-value {
-    color: #222;
+    color: #000000;
     line-height: 1.6;
+  text-decoration: none;
+}
+
+.boomgaard-contact-value a{
+    color: #000000;
+    line-height: 1.6;
+  text-decoration: none;
+}
+
+.boomgaard-contact-value a:hover{
+    color: #000000;
+    line-height: 1.6;
+  text-decoration: none;
 }
 
 @media (max-width: 900px) {
