@@ -797,6 +797,7 @@ text-decoration: none;
     color: #666;
     font-size: 0.85rem;
     letter-spacing: 0.08em;
+    font-weight: 100;
 }
 
 .boomgaard-contact-value {
@@ -852,6 +853,12 @@ text-decoration: none;
 .boomgaard-contact-value:hover .boomgaard-contact-tooltip {
     opacity: 1;
     visibility: visible;
+}
+
+.boomgaard-contact-item,
+.boomgaard-contact-card,
+.boomgaard-contact-sidebar {
+    overflow: visible;
 }
 
 @media (max-width: 900px) {
