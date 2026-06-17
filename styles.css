@@ -756,6 +756,15 @@ text-decoration: none;
 
 .boomgaard-contact-item {
     margin-bottom: 1.5rem;
+    text-decoration: none;
+}
+
+.boomgaard-contact-item a {
+    text-decoration: none;
+}
+
+.boomgaard-contact-item a:hover {
+    text-decoration: none;
 }
 
 .boomgaard-contact-label {
