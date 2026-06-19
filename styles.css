@@ -836,40 +836,6 @@ text-decoration: none;
   text-decoration: none;
 }
 
-.boomgaard-contact-tooltip {
-    position: absolute;
-    left: 50%;
-    bottom: calc(100% + 12px);
-    transform: translateX(-50%);
-    width: 240px;
-    padding: 0.75rem 1rem;
-    background: #222;
-    color: #fff;
-    font-size: 0.85rem;
-    line-height: 1.5;
-    border-radius: 4px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.2s ease, visibility 0.2s ease;
-    z-index: 100;
-}
-
-.boomgaard-contact-tooltip::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    border-width: 6px;
-    border-style: solid;
-    border-color: #222 transparent transparent transparent;
-}
-
-.boomgaard-contact-value:hover .boomgaard-contact-tooltip {
-    opacity: 1;
-    visibility: visible;
-}
-
 .boomgaard-contact-item,
 .boomgaard-contact-card,
 .boomgaard-contact-sidebar {
