@@ -1173,7 +1173,185 @@ text-decoration: none;
 
 }
 
+/* Entire Page */
 
+.archive-leader-page {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Hero */
+
+.archive-leader-hero {
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.archive-leader-portrait {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.archive-leader-name {
+    margin-top: 1.5rem;
+    font-size: 2.4rem;
+    font-weight: 400;
+}
+
+/* Divider */
+
+.archive-leader-divider {
+    width: 100vw;
+    height: 2px;
+    background: #d9d9d9;
+    margin: 3rem calc(50% - 50vw);
+}
+
+/* Crest + Titles */
+
+.archive-leader-officials {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    padding: 2rem 1rem;
+}
+
+.archive-leader-crest-column {
+    flex: 0 0 300px;
+    text-align: center;
+}
+
+.archive-leader-crest {
+    width: 100%;
+    max-width: 220px;
+}
+
+.archive-leader-titles-column {
+    flex: 1;
+}
+
+.archive-leader-titles-column ul {
+    padding-left: 1.5rem;
+}
+
+.archive-leader-titles-column li {
+    margin-bottom: 0.8rem;
+    line-height: 1.7;
+}
+
+/* General Sections */
+
+.archive-leader-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.archive-leader-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.archive-leader-section p {
+    line-height: 1.9;
+    text-align: justify;
+    margin-bottom: 1.5rem;
+}
+
+/* Timeline */
+
+.archive-timeline-item {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.archive-timeline-year {
+    min-width: 90px;
+    font-weight: 700;
+}
+
+.archive-timeline-text {
+    flex: 1;
+}
+
+/* Publications */
+
+.archive-publications-list {
+    max-width: 700px;
+    margin: 0 auto;
+    padding-left: 1.5rem;
+}
+
+.archive-publications-list li {
+    margin-bottom: 0.75rem;
+}
+
+/* Gallery */
+
+.archive-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.archive-gallery-image {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+}
+
+/* Navigation */
+
+.archive-leader-navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 1rem 4rem;
+}
+
+.archive-leader-navigation a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.archive-nav-left {
+    text-align: left;
+}
+
+.archive-nav-right {
+    text-align: right;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+
+    .archive-leader-officials {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .archive-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .archive-timeline-item {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    .archive-leader-navigation {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+}
 
 .footer-top {
   background-color: #EE1C25;
