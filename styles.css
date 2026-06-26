@@ -1327,15 +1327,49 @@ text-decoration: none;
 /* Publications */
 
 .archive-publications-list {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding-left: 1.5rem;
-  text-align: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .archive-publications-list li {
-    margin-bottom: 0.75rem;
-    text-align: left;
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+  padding: 6px 0;
+}
+
+/* DATE column */
+.archive-date {
+  min-width: 140px;
+  white-space: nowrap;
+  opacity: 0.75;
+  font-weight: 500;
+}
+
+/* TITLE column */
+.archive-title {
+  flex: 1;
+}
+
+/* 🌙 Mobile behavior: stack into vertical rhythm */
+@media (max-width: 600px) {
+  .archive-publications-list li {
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+  }
+
+  .archive-date {
+    min-width: unset;
+    white-space: normal;
+    opacity: 0.65;
+    font-size: 0.9rem;
+  }
+
+  .archive-title {
+    font-size: 1rem;
+  }
 }
 
 /* Gallery */
