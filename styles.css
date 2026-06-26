@@ -1332,6 +1332,11 @@ text-decoration: none;
     color: #000000;
 }
 
+.archive-leader-navigation a:hover {
+    text-decoration: none;
+    color: #000000;
+}
+
 .archive-nav-left {
     text-align: left;
     width: 200px;
