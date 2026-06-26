@@ -1287,7 +1287,7 @@ text-decoration: none;
 
 .archive-leader-section .archive-timeline-item {
     display: grid;
-    grid-template-columns: 260px 1fr;
+    grid-template-columns: minmax(220px, 260px) 1fr;
     
     gap: 2rem;
 
