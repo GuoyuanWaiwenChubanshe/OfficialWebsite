@@ -1177,7 +1177,7 @@ text-decoration: none;
 
 .archive-leader-page {
     width: 100%;
-    max-width: 1400px;
+    max-width: 1920px;
     margin: 0 auto;
 }
 
@@ -1237,7 +1237,7 @@ text-decoration: none;
 /* General Sections */
 
 .archive-leader-section {
-    max-width: 1920px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 1rem;
   text-decoration: none;
@@ -1292,7 +1292,6 @@ text-decoration: none;
     max-width: 1000px;
     margin: 0 auto;
     padding-left: 1.5rem;
-    text-align: center;
 }
 
 .archive-publications-list li {
