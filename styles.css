@@ -1328,10 +1328,9 @@ text-decoration: none;
 
 .archive-publications-list {
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   max-width: 900px; /* Adjust as needed */
-  text-align: center; /* Centers the list itself */
 }
 
 .archive-publications-list li {
@@ -1339,8 +1338,8 @@ text-decoration: none;
   gap: 14px;
   align-items: baseline;
   padding: 6px 0;
-  text-align: left;
-  justify-content: flex-start;
+  text-align: center; /* Centers the content of the li */
+  justify-content: center; /* Centers the flex items as a group */
 }
 
 /* DATE column - stays on the left */
@@ -1350,12 +1349,19 @@ text-decoration: none;
   opacity: 0.75;
   font-weight: 500;
   flex-shrink: 0; /* Prevents date from shrinking */
+  text-align: left; /* Date text stays left-aligned */
 }
 
 /* TITLE column - takes remaining space */
 .archive-title {
+  flex: 0 1 auto; /* Don't grow, allow shrink */
+  text-align: center; /* Center the title text */
+  min-width: 0; /* Prevents overflow issues */
+}
+
+.archive-title-centered {
   flex: 1;
-  text-align: left; /* Ensures title text is left-aligned */
+  text-align: center;
 }
 
 /* 🌙 Mobile behavior: stack into vertical rhythm */
@@ -1363,7 +1369,7 @@ text-decoration: none;
   .archive-publications-list li {
     flex-direction: column;
     gap: 4px;
-    align-items: flex-start;
+    align-items: center; /* Center items on mobile */
   }
 
   .archive-date {
@@ -1371,10 +1377,12 @@ text-decoration: none;
     white-space: normal;
     opacity: 0.65;
     font-size: 0.9rem;
+    text-align: center; /* Center date on mobile */
   }
 
   .archive-title {
     font-size: 1rem;
+    text-align: center; /* Keep title centered on mobile */
   }
 }
 
