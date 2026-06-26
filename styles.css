@@ -1241,6 +1241,7 @@ text-decoration: none;
     margin: 0 auto;
     padding: 1rem;
   text-decoration: none;
+  text-align: center
 }
 
 .archive-leader-section h2 {
@@ -1266,6 +1267,10 @@ text-decoration: none;
 .archive-leader-section a:hover {
   text-decoration: none;
   color: #000000;
+}
+
+.archive-leader-section li {
+    text-align: center;
 }
 
 /* Timeline */
