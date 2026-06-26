@@ -1224,6 +1224,8 @@ text-decoration: none;
 .archive-leader-titles-column {
     flex: 1;
   max-width: 1000px;
+    justify-content: right;
+  align-items: right;
 }
 
 .archive-leader-titles-column ul {
