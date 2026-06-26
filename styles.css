@@ -1223,6 +1223,7 @@ text-decoration: none;
 
 .archive-leader-titles-column {
     flex: 1;
+  padding: 0px;
   max-width: 1000px;
     justify-content: right;
   align-items: right;
