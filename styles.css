@@ -1348,6 +1348,16 @@ text-decoration: none;
         gap: 2rem;
     }
 
+  .archive-leader-crest {
+    width: 100%;
+    max-width: 250px;
+}
+
+  .archive-leader-crest-column {
+    flex: 0 0 250px;
+    text-align: center;
+}
+
     .archive-gallery {
         grid-template-columns: 1fr;
     }
