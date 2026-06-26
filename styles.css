@@ -1383,6 +1383,20 @@ text-decoration: none;
     }
 }
 
+@media (max-width: 1400px) {
+
+  .archive-leader-crest {
+    width: 100%;
+    max-width: 350px;
+}
+
+  .archive-leader-crest-column {
+    flex: 0 0 350px;
+    text-align: center;
+}
+
+}
+
 .footer-top {
   background-color: #EE1C25;
   color: white;
