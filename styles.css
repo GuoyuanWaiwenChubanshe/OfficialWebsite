@@ -1206,15 +1206,13 @@ text-decoration: none;
 
 .archive-leader-officials {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 35% 65%;
 
-    align-items: center;
+    max-width: 1800px;
+    width: 95vw;
 
-    max-width: 1400px;
     margin: 0 auto;
-
-    padding: 4rem 2rem;
-    gap: 2rem;
+    align-items: center;
 }
 
 .archive-leader-crest-column {
@@ -1236,11 +1234,8 @@ text-decoration: none;
 }
 
 .archive-leader-titles-column ul {
-    margin: 0 auto;
-    padding-left: 1.5rem;
-
     width: fit-content;
-
+    margin: 0 auto;
     text-align: left;
 }
 
@@ -1284,6 +1279,10 @@ text-decoration: none;
   color: #000000;
 }
 
+.archive-leader-section li {
+  text-align: left;
+}
+
 /* Timeline */
 
 .archive-timeline-item {
@@ -1307,10 +1306,12 @@ text-decoration: none;
     max-width: 1000px;
     margin: 0 auto;
     padding-left: 1.5rem;
+  text-align: left;
 }
 
 .archive-publications-list li {
     margin-bottom: 0.75rem;
+    text-align: left;
 }
 
 /* Gallery */
