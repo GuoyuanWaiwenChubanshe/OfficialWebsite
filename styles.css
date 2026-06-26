@@ -1202,15 +1202,6 @@ text-decoration: none;
     font-weight: 400;
 }
 
-/* Divider */
-
-.archive-leader-divider {
-    width: 100vw;
-    height: 2px;
-    background: #d9d9d9;
-    margin: 3rem calc(50% - 50vw);
-}
-
 /* Crest + Titles */
 
 .archive-leader-officials {
@@ -1221,13 +1212,13 @@ text-decoration: none;
 }
 
 .archive-leader-crest-column {
-    flex: 0 0 300px;
+    flex: 0 0 700px;
     text-align: center;
 }
 
 .archive-leader-crest {
     width: 100%;
-    max-width: 220px;
+    max-width: 600px;
 }
 
 .archive-leader-titles-column {
@@ -1256,9 +1247,13 @@ text-decoration: none;
     margin-bottom: 2rem;
 }
 
+.archive-leader-section h3 {
+    text-align: center;
+}
+
 .archive-leader-section p {
     line-height: 1.9;
-    text-align: justify;
+    text-align: center;
     margin-bottom: 1.5rem;
 }
 
@@ -1282,7 +1277,7 @@ text-decoration: none;
 /* Publications */
 
 .archive-publications-list {
-    max-width: 700px;
+    max-width: 1000px;
     margin: 0 auto;
     padding-left: 1.5rem;
 }
