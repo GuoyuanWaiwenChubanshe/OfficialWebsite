@@ -1301,7 +1301,7 @@ text-decoration: none;
 .archive-leader-section .archive-timeline-year {
     min-width: 140px;
     white-space: nowrap;
-    font-weight: 700;
+    font-weight: normal;
     flex-shrink: 0;
     text-align: left;
 }
@@ -1310,7 +1310,7 @@ text-decoration: none;
     flex: 1;
     text-align: left;
     line-height: 1.8;
-    font-weight: 400;
+    font-weight: normal;
 }
 
 .archive-leader-section .archive-timeline-text p,
@@ -1369,8 +1369,7 @@ text-decoration: none;
 .archive-date {
   min-width: 140px;
   white-space: nowrap;
-  opacity: 0.75;
-  font-weight: 500;
+  font-weight: normal;
   flex-shrink: 0; /* Prevents date from shrinking */
   text-align: left; /* Date text left-aligned */
 }
@@ -1397,12 +1396,11 @@ text-decoration: none;
   .archive-date {
     min-width: unset;
     white-space: normal;
-    opacity: 0.65;
-    font-size: 0.9rem;
+    font-size: 16px;
   }
 
   .archive-title {
-    font-size: 1rem;
+    font-size: 16px;
   }
 }
 
