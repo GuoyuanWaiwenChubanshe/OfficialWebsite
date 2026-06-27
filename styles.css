@@ -1286,30 +1286,31 @@ text-decoration: none;
 /* Timeline */
 
 .archive-leader-section .archive-timeline-item {
-    display: grid;
-    grid-template-columns: minmax(220px, 260px) 1fr;
-    
-    gap: 2rem;
-
-    margin-bottom: 2rem;
-
-    align-items: start;
-
+    display: flex;
+    gap: 20px;
+    align-items: baseline;
+    padding: 6px 0;
+    margin-bottom: 0.5rem;
     width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
 }
 
 .archive-leader-section .archive-timeline-year {
-    font-weight: 700;
-
-    text-align: left;
-
+    min-width: 140px;
     white-space: nowrap;
+    font-weight: 700;
+    flex-shrink: 0;
+    text-align: left;
 }
 
 .archive-leader-section .archive-timeline-text {
+    flex: 1;
     text-align: left;
-
     line-height: 1.8;
+    font-weight: 400;
 }
 
 .archive-leader-section .archive-timeline-text p,
@@ -1322,6 +1323,29 @@ text-decoration: none;
     max-width: 1600px;
     margin: 0 auto;
     padding: 1rem 2rem;
+}
+
+/* Mobile: date above text, just like Selected Publications */
+@media (max-width: 600px) {
+    .archive-leader-section .archive-timeline-item {
+        flex-direction: column;
+        gap: 4px;
+        align-items: flex-start;
+        padding: 8px 0;
+    }
+
+    .archive-leader-section .archive-timeline-year {
+        min-width: unset;
+        white-space: normal;
+        font-size: 0.95rem;
+        opacity: 0.75;
+        font-weight: 600;
+    }
+
+    .archive-leader-section .archive-timeline-text {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
 }
 
 /* Publications */
