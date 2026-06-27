@@ -1422,10 +1422,11 @@ text-decoration: none;
 
 /* Navigation */
 
-.archive-leader-navigation {
-    display: flex;
-    justify-content: space-between;
-    padding: 2rem 1rem 4rem;
+    .archive-leader-navigation {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
 }
 
 .archive-leader-navigation a {
@@ -1478,13 +1479,6 @@ text-decoration: none;
         flex-direction: column;
         gap: 0.4rem;
     }
-
-    .archive-leader-navigation {
-        flex-direction: column;
-        gap: 1.5rem;
-        text-align: center;
-    }
-}
 
 @media (max-width: 1000px) {
 
