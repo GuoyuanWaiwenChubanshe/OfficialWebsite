@@ -1231,6 +1231,8 @@ text-decoration: none;
     display: flex;
     flex-direction: column;
     justify-content: right;
+      align-items: right;
+  margin: 0px;
 }
 
 .archive-leader-titles-column ul {
