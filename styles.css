@@ -1432,7 +1432,7 @@ text-decoration: none;
 /* TITLE column - takes remaining space */
 .archive-title {
   flex: 1; /* Takes remaining space */
-    text-align: left !important;
+    text-align: center !important;
 }
 
 .archive-title-centered {
