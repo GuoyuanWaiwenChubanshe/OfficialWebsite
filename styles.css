@@ -1484,7 +1484,7 @@ text-decoration: none;
     display: flex;
     justify-content: space-between;  /* Pushes items to far ends */
     align-items: center;
-    padding: 1rem, 1rem, 1rem;
+    padding: 20px;
     max-width: 100%;  /* Full width */
     width: 100%;
     margin: 0;  /* Remove auto centering */
@@ -1521,7 +1521,7 @@ text-decoration: none;
     .archive-leader-navigation {
         flex-direction: row;  /* Keep side by side */
         justify-content: space-between;  /* Keep at far ends */
-        padding: 1rem, 1rem, 1rem;
+        padding: 20px;
         gap: 15px;
     }
 
