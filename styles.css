@@ -1433,7 +1433,7 @@ text-decoration: none;
 /* TITLE column - takes remaining space */
 .archive-title {
   flex: 1; /* Takes remaining space */
-    text-align: center !important;
+    text-align: left !important;
       margin-left: auto;
     margin-right: auto;
 }
