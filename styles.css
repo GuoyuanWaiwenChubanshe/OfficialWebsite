@@ -1401,12 +1401,10 @@ text-decoration: none;
 
 .archive-publications-list {
     list-style: none;
-    margin: 0 auto;  /* KEY: centers the block horizontally */
+    margin: 0 auto !important;  /* Force center */
     padding: 0;
     max-width: 1400px;  /* Fixed max-width so it doesn't stretch */
     width: 100%;
-  justify-content: center;
-  align-items: center;
   
 }
 
@@ -1415,14 +1413,14 @@ text-decoration: none;
     gap: 20px;
     align-items: baseline;
     padding: 4px 0;
-    text-align: left;
+    text-align: left !important;
 }
 
 /* DATE column - stays on the left */
 .archive-date {
     min-width: 140px;
     flex-shrink: 0;
-    text-align: left;
+    text-align: left !important;
     font-weight: normal;
     white-space: nowrap;
 }
@@ -1430,7 +1428,7 @@ text-decoration: none;
 /* TITLE column - takes remaining space */
 .archive-title {
   flex: 1; /* Takes remaining space */
-  text-align: left; /* Title text left-aligned */
+    text-align: left !important;
 }
 
 .archive-title-centered {
@@ -1616,7 +1614,7 @@ text-decoration: none;
     }
 
     /* Publications list - centered as a whole, text left-aligned inside */
-    .archive-publications-list {
+     {
         list-style: none;
         margin: 0 auto;  /* Centered */
         padding: 0;
