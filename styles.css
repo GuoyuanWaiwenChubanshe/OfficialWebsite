@@ -1570,7 +1570,7 @@ text-decoration: none;
         min-width: 180px;  /* Fixed enough for consistent spacing */
         flex-shrink: 0;
         text-align: left;
-        font-weight: 700;
+        font-weight: normal;
         white-space: nowrap;
     }
 
@@ -1601,7 +1601,7 @@ text-decoration: none;
         min-width: 140px;
         flex-shrink: 0;
         text-align: left;
-        font-weight: 500;
+        font-weight: normal;
         opacity: 0.75;
         white-space: nowrap;
     }
