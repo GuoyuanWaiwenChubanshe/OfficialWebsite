@@ -1387,8 +1387,7 @@ text-decoration: none;
         min-width: unset;
         white-space: normal;
         font-size: 0.95rem;
-        opacity: 0.75;
-        font-weight: 600;
+        font-weight: normal;
     }
 
     .archive-leader-section .archive-timeline-text {
