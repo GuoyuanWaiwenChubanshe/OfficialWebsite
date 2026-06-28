@@ -1423,7 +1423,7 @@ text-decoration: none;
 
 /* DATE column - stays on the left */
 .archive-date {
-    min-width: 140px;
+    min-width: 143px;
     flex-shrink: 0;
     text-align: left !important;
     font-weight: normal;
@@ -1640,7 +1640,7 @@ text-decoration: none;
     }
 
     .archive-date {
-        min-width: 140px;
+        min-width: 143px;
         flex-shrink: 0;
         text-align: left;
         font-weight: normal;
