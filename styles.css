@@ -1404,6 +1404,10 @@ text-decoration: none;
     padding: 0;
     max-width: 1400px;  /* Fixed max-width so it doesn't stretch */
     width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 .archive-publications-list li {
