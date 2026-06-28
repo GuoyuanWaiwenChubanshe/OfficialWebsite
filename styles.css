@@ -1479,7 +1479,7 @@ text-decoration: none;
     display: flex;
     justify-content: space-between;  /* Pushes items to far ends */
     align-items: center;
-    padding: 2rem 2rem 4rem;  /* Added horizontal padding for breathing room */
+    padding-bottom: 3px;
     max-width: 100%;  /* Full width */
     width: 100%;
     margin: 0;  /* Remove auto centering */
@@ -1516,12 +1516,12 @@ text-decoration: none;
     .archive-leader-navigation {
         flex-direction: row;  /* Keep side by side */
         justify-content: space-between;  /* Keep at far ends */
-        padding: 1.5rem 1rem 3rem;
+        padding-bottom: 3px;
         gap: 15px;
     }
 
     .archive-leader-navigation a {
-        font-size: 1rem;
+        font-size: 16px;
         white-space: nowrap;
     }
 }
@@ -1529,7 +1529,7 @@ text-decoration: none;
 /* Very small screens */
 @media (max-width: 400px) {
     .archive-leader-navigation a {
-        font-size: 0.85rem;
+        font-size: 16px;
     }
 }
 
