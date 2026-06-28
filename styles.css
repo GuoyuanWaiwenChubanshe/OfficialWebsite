@@ -1239,6 +1239,55 @@ text-decoration: none;
     text-align: left;
 }
 
+@media (max-width: 1024px) {
+    .archive-leader-officials {
+        display: grid;
+        grid-template-columns: auto 1fr;  /* Crest takes natural width, titles take the rest */
+        gap: 2rem;
+        align-items: center;
+        width: 95%;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+    .archive-leader-crest-column {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .archive-leader-crest {
+        max-width: 160px;  /* Controls crest size so it doesn't overwhelm */
+        width: 100%;
+        height: auto;
+    }
+
+    .archive-leader-titles-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .archive-leader-titles-column h2 {
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+
+    .archive-leader-titles-column ul {
+        margin: 0;
+        padding-left: 1.2rem;  /* Proper indent for bullet points */
+        text-align: left;
+        width: 100%;
+    }
+
+    .archive-leader-titles-column li {
+        text-align: left;
+        line-height: 1.6;
+        margin-bottom: 0.5rem;
+    }
+}
+
 .archive-leader-titles-column li {
     margin-bottom: 0.8rem;
     line-height: 1.7;
@@ -1496,6 +1545,133 @@ text-decoration: none;
         margin: 0 auto;
     }
 
+}
+
+@media (max-width: 1024px) {
+    .archive-leader-section {
+        padding: 1rem 2.5rem;  /* Adds breathing room on both sides */
+        max-width: 1400px;
+        margin: 0 auto;
+        text-align: center;  /* Ensures child block containers center */
+    }
+
+    /* Timeline items - centered as a whole, text left-aligned inside */
+    .archive-leader-section .archive-timeline-item {
+        display: flex;
+        gap: 20px;
+        align-items: baseline;
+        padding: 6px 0;
+        margin: 0 auto 0.5rem auto;  /* Centered horizontally */
+        max-width: 900px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .archive-leader-section .archive-timeline-year {
+        min-width: 180px;  /* Fixed enough for consistent spacing */
+        flex-shrink: 0;
+        text-align: left;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+
+    .archive-leader-section .archive-timeline-text {
+        flex: 1;
+        text-align: left;
+        line-height: 1.8;
+    }
+
+    /* Publications list - centered as a whole, text left-aligned inside */
+    .archive-publications-list {
+        list-style: none;
+        margin: 0 auto;  /* Centered */
+        padding: 0;
+        max-width: 900px;
+        width: 100%;
+    }
+
+    .archive-publications-list li {
+        display: flex;
+        gap: 20px;
+        align-items: baseline;
+        padding: 4px 0;
+        text-align: left;
+    }
+
+    .archive-date {
+        min-width: 140px;
+        flex-shrink: 0;
+        text-align: left;
+        font-weight: 500;
+        opacity: 0.75;
+        white-space: nowrap;
+    }
+
+    .archive-title {
+        flex: 1;
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .archive-leader-officials {
+        grid-template-columns: 1fr;  /* Stack crest on top, list below */
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .archive-leader-crest {
+        max-width: 140px;
+    }
+
+    .archive-leader-titles-column h2 {
+        text-align: center;
+    }
+
+    .archive-leader-titles-column ul {
+        margin: 0 auto;
+        padding-left: 1.5rem;
+        text-align: left;
+        width: fit-content;
+    }
+
+    .archive-leader-section {
+        padding: 1rem 1.5rem;
+    }
+
+    /* Timeline: stack date above text */
+    .archive-leader-section .archive-timeline-item {
+        flex-direction: column;
+        gap: 2px;
+        align-items: flex-start;
+        padding: 8px 0;
+    }
+
+    .archive-leader-section .archive-timeline-year {
+        min-width: unset;
+        white-space: normal;
+        font-size: 0.95rem;
+        opacity: 0.75;
+    }
+
+    /* Publications: stack date above title */
+    .archive-publications-list li {
+        flex-direction: column;
+        gap: 2px;
+        align-items: flex-start;
+        padding: 8px 0;
+    }
+
+    .archive-date {
+        min-width: unset;
+        white-space: normal;
+        font-size: 0.9rem;
+        opacity: 0.65;
+    }
+
+    .archive-title {
+        font-size: 1rem;
+    }
 }
 
 .footer-top {
