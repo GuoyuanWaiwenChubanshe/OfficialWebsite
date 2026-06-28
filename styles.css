@@ -1348,7 +1348,7 @@ text-decoration: none;
 }
 
 .archive-leader-section .archive-timeline-year {
-    min-width: 200px;
+    min-width: 238.50px;
     white-space: nowrap;
     font-weight: normal;
     flex-shrink: 0;
@@ -1386,8 +1386,9 @@ text-decoration: none;
     .archive-leader-section .archive-timeline-year {
         min-width: unset;
         white-space: normal;
-        font-size: 0.95rem;
+        font-size: 16px;
         font-weight: normal;
+    min-width: 238.50px;
     }
 
     .archive-leader-section .archive-timeline-text {
@@ -1572,7 +1573,7 @@ text-decoration: none;
     }
 
     .archive-leader-section .archive-timeline-year {
-        min-width: 180px;  /* Fixed enough for consistent spacing */
+    min-width: 238.50px;  /* Fixed enough for consistent spacing */
         flex-shrink: 0;
         text-align: left;
         font-weight: normal;
@@ -1652,10 +1653,9 @@ text-decoration: none;
     }
 
     .archive-leader-section .archive-timeline-year {
-        min-width: unset;
+    min-width: 238.50px;
         white-space: normal;
-        font-size: 0.95rem;
-        opacity: 0.75;
+        font-size: 16px;
     }
 
     /* Publications: stack date above title */
