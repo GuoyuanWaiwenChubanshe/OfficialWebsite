@@ -1348,7 +1348,7 @@ text-decoration: none;
 }
 
 .archive-leader-section .archive-timeline-year {
-    min-width: 238.50px;
+    min-width: 250px;
     white-space: nowrap;
     font-weight: normal;
     flex-shrink: 0;
@@ -1440,7 +1440,7 @@ text-decoration: none;
 
 .archive-title-centered {
   flex: 1;
-  text-align: center;
+  text-align: left;
       margin-left: auto;
     margin-right: auto;
 }
