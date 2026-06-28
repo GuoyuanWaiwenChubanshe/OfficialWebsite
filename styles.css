@@ -1473,17 +1473,23 @@ text-decoration: none;
 
 /* Navigation */
 
-    .archive-leader-navigation {
-        flex-direction: column;
-        gap: 1.5rem;
-        text-align: center;
-    }
+.archive-leader-navigation {
+    display: flex;
+    justify-content: space-between;  /* Pushes items to far ends */
+    align-items: center;
+    padding: 2rem 2rem 4rem;  /* Added horizontal padding for breathing room */
+    max-width: 100%;  /* Full width */
+    width: 100%;
+    margin: 0;  /* Remove auto centering */
+    gap: 20px;
+}
 
 .archive-leader-navigation a {
     text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: normal;
     color: #000000;
+    white-space: nowrap;
 }
 
 .archive-leader-navigation a:hover {
@@ -1494,11 +1500,35 @@ text-decoration: none;
 .archive-nav-left {
     text-align: left;
     width: 200px;
+    flex: 0 0 auto;
+  
 }
 
 .archive-nav-right {
     text-align: right;
     width: 200px;
+    flex: 0 0 auto;
+}
+
+@media (max-width: 768px) {
+    .archive-leader-navigation {
+        flex-direction: row;  /* Keep side by side */
+        justify-content: space-between;  /* Keep at far ends */
+        padding: 1.5rem 1rem 3rem;
+        gap: 15px;
+    }
+
+    .archive-leader-navigation a {
+        font-size: 1rem;
+        white-space: nowrap;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 400px) {
+    .archive-leader-navigation a {
+        font-size: 0.85rem;
+    }
 }
 
 /* Responsive */
