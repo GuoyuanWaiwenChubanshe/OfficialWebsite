@@ -1230,7 +1230,7 @@ text-decoration: none;
 .archive-leader-titles-column {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: right;
 }
 
 .archive-leader-titles-column ul {
@@ -1266,7 +1266,7 @@ text-decoration: none;
     .archive-leader-titles-column {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: right;
     }
 
     .archive-leader-titles-column h2 {
@@ -1291,6 +1291,7 @@ text-decoration: none;
 .archive-leader-titles-column li {
     margin-bottom: 0.8rem;
     line-height: 1.7;
+        text-align: left;
 }
 
 /* General Sections */
