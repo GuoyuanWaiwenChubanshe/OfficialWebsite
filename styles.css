@@ -1722,6 +1722,55 @@ text-decoration: none;
     width: 100%;
 }
 
+about-page-wide {
+      background-color: #FFFFFF;
+      color: #000000;
+      line-height: 1.7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+        max-width: 1600px;
+      width: 100%;
+      padding: 2rem 1.5rem 4rem;
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+}
+
+about-container-wide {
+        max-width: 1600px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2.2rem;
+      position: relative;
+      z-index: 1;
+}
+
+about-mission-block-wide {
+      font-size: 16px;
+      background: #FFFFFF;
+      padding: 1.5rem 1.5rem 1.2rem;
+      border-left: 3px solid #EE1C25;
+      border-radius: 2px;
+      margin: 0.8rem 0 1rem;
+}
+
+about-section-wide {
+        display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      text-decoration: none;
+}
+
+about-list-wide {
+      list-style: none;
+      padding-left: 0;
+      margin: 0.5rem 0 0.8rem;
+}
+
 .footer-top {
   background-color: #EE1C25;
   color: white;
