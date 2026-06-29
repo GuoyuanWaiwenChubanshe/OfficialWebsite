@@ -1173,15 +1173,11 @@ text-decoration: none;
 
 }
 
-/* Entire Page */
-
 .archive-leader-page {
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
 }
-
-/* Hero */
 
 .archive-leader-hero {
     text-align: center;
@@ -1202,11 +1198,9 @@ text-decoration: none;
     font-weight: 400;
 }
 
-/* Crest + Titles */
-
 .archive-leader-officials {
     display: grid;
-    grid-template-columns: 1fr 1fr;  /* 50/50 split */
+    grid-template-columns: 1fr 1fr;
     max-width: 1800px;
     width: 95vw;
     margin: 0 auto;
@@ -1252,7 +1246,7 @@ text-decoration: none;
 
 @media (max-width: 1024px) {
     .archive-leader-officials {
-        grid-template-columns: 1fr 1fr;  /* Keep 50/50 on tablet */
+        grid-template-columns: 1fr 1fr;
         gap: 2rem;
         width: 95%;
         max-width: 1000px;
@@ -1281,7 +1275,7 @@ text-decoration: none;
 
     .archive-leader-titles-column ul {
         margin: 0;
-        padding-left: 1.2rem;  /* Proper indent for bullet points */
+        padding-left: 1.2rem;
         text-align: left;
         width: 100%;
     }
@@ -1290,8 +1284,6 @@ text-decoration: none;
         text-align: left;
     }
 }
-
-/* General Sections */
 
 .archive-leader-section {
     max-width: 1400px;
@@ -1329,8 +1321,6 @@ text-decoration: none;
 .archive-leader-section li {
   text-align: left;
 }
-
-/* Timeline */
 
 .archive-leader-section .archive-timeline-item {
     display: flex;
@@ -1372,7 +1362,6 @@ text-decoration: none;
     padding: 1rem 2rem;
 }
 
-/* Mobile: date above text, just like Selected Publications */
 @media (max-width: 600px) {
     .archive-leader-section .archive-timeline-item {
         flex-direction: column;
@@ -1395,18 +1384,16 @@ text-decoration: none;
     }
 }
 
-/* Publications */
-
 .archive-publications-list {
     list-style: none;
-    margin: 0 auto !important;  /* Force center */
+    margin: 0 auto !important;
     padding: 0;
-    max-width: 900px;  /* Fixed max-width so it doesn't stretch */
+    max-width: 900px;
     width: 100%;
       display: flex;
     flex-direction: column;
       text-align: left !important;
-    align-items: center;  /* This centers the items horizontally */
+    align-items: center;
   
 }
 
@@ -1416,11 +1403,10 @@ text-decoration: none;
     align-items: baseline;
     padding: 4px 0;
     text-align: left !important;
-      width: 100%;  /* Takes full width of the container */
+      width: 100%;
       max-width: 900px;
 }
 
-/* DATE column - stays on the left */
 .archive-date {
     min-width: 143px;
     flex-shrink: 0;
@@ -1429,9 +1415,8 @@ text-decoration: none;
     white-space: nowrap;
 }
 
-/* TITLE column - takes remaining space */
 .archive-title {
-  flex: 1; /* Takes remaining space */
+  flex: 1;
     text-align: left !important;
       margin-left: auto;
     margin-right: auto;
@@ -1444,7 +1429,6 @@ text-decoration: none;
     margin-right: auto;
 }
 
-/* 🌙 Mobile behavior: stack into vertical rhythm */
 @media (max-width: 600px) {
   .archive-publications-list li {
     flex-direction: column;
@@ -1464,8 +1448,6 @@ text-decoration: none;
   }
 }
 
-/* Gallery */
-
 .archive-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1478,16 +1460,14 @@ text-decoration: none;
     object-fit: cover;
 }
 
-/* Navigation */
-
 .archive-leader-navigation {
     display: flex;
-    justify-content: space-between;  /* Pushes items to far ends */
+    justify-content: space-between;
     align-items: center;
     padding: 20px;
-    max-width: 100%;  /* Full width */
+    max-width: 100%;
     width: 100%;
-    margin: 0;  /* Remove auto centering */
+    margin: 0;
     gap: 20px;
 }
 
@@ -1518,8 +1498,8 @@ text-decoration: none;
 
 @media (max-width: 768px) {
     .archive-leader-navigation {
-        flex-direction: row;  /* Keep side by side */
-        justify-content: space-between;  /* Keep at far ends */
+        flex-direction: row;
+        justify-content: space-between;
         padding: 20px;
         gap: 15px;
     }
@@ -1530,14 +1510,11 @@ text-decoration: none;
     }
 }
 
-/* Very small screens */
 @media (max-width: 400px) {
     .archive-leader-navigation a {
         font-size: 16px;
     }
 }
-
-/* Responsive */
 
 @media (max-width: 900px) {
 
@@ -1589,26 +1566,25 @@ text-decoration: none;
 
 @media (max-width: 1024px) {
     .archive-leader-section {
-        padding: 1rem 2.5rem;  /* Adds breathing room on both sides */
+        padding: 1rem 2.5rem;
         max-width: 1400px;
         margin: 0 auto;
-        text-align: center;  /* Ensures child block containers center */
+        text-align: center;
     }
 
-    /* Timeline items - centered as a whole, text left-aligned inside */
     .archive-leader-section .archive-timeline-item {
         display: flex;
         gap: 26px;
         align-items: baseline;
         padding: 6px 0;
-        margin: 0 auto 0.5rem auto;  /* Centered horizontally */
+        margin: 0 auto 0.5rem auto;
         max-width: 900px;
         width: 100%;
         text-align: left;
     }
 
     .archive-leader-section .archive-timeline-year {
-    min-width: 250px;  /* Fixed enough for consistent spacing */
+    min-width: 250px;
         flex-shrink: 0;
         text-align: left;
         font-weight: normal;
@@ -1621,10 +1597,9 @@ text-decoration: none;
         line-height: 1.8;
     }
 
-    /* Publications list - centered as a whole, text left-aligned inside */
      {
         list-style: none;
-        margin: 0 auto;  /* Centered */
+        margin: 0 auto;
         padding: 0;
         max-width: 900px;
         width: 100%;
@@ -1654,7 +1629,7 @@ text-decoration: none;
 
 @media (max-width: 768px) {
     .archive-leader-officials {
-        grid-template-columns: 1fr;  /* Stack crest on top, list below */
+        grid-template-columns: 1fr;
         gap: 1.5rem;
         text-align: center;
     }
@@ -1682,7 +1657,6 @@ text-decoration: none;
         padding: 1rem 1.5rem;
     }
 
-    /* Timeline: stack date above text */
     .archive-leader-section .archive-timeline-item {
         flex-direction: column;
         gap: 2px;
@@ -1696,7 +1670,6 @@ text-decoration: none;
         font-size: 16px;
     }
 
-    /* Publications: stack date above title */
     .archive-publications-list li {
         flex-direction: column;
         gap: 2px;
