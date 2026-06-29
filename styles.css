@@ -1495,20 +1495,19 @@ text-decoration: none;
     text-decoration: none;
     font-size: 16px;
     font-weight: normal;
-    color: #000000;
+    color: #EE1C25;
     white-space: nowrap;
 }
 
 .archive-leader-navigation a:hover {
     text-decoration: none;
-    color: #000000;
+    color: #EE1C25;
 }
 
 .archive-nav-left {
     text-align: left;
     width: 200px;
     flex: 0 0 auto;
-  
 }
 
 .archive-nav-right {
