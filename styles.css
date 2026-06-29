@@ -1718,8 +1718,8 @@ text-decoration: none;
 }
 
 .research-content {
-    width: min(100%, 1600px);
-    margin-inline: auto;
+    max-width: 1600px !important;
+    width: 100%;
 }
 
 .footer-top {
