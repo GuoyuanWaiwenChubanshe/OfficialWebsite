@@ -206,6 +206,7 @@ a {
     .welcome {
       text-align: center;
       padding: 60px 20px;
+            line-height: 1.7;
     }
 
     .welcome h1 {
