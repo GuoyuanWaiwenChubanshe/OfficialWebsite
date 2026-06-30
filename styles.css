@@ -258,6 +258,11 @@ a {
       text-decoration: none;
     }
 
+    .book-story a:hover {
+      color: #EE1C25;
+      text-decoration: none;
+    }
+
     .book-story p {
       color: #000000;
       text-decoration: none;
