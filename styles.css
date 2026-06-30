@@ -261,7 +261,7 @@ a {
     .book-story p {
       color: #000000;
       text-decoration: none;
-      margin-bottom: 20px;
+      padding-bottom: 20px;
     }
 
     .book-grid {
