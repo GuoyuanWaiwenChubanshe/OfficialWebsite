@@ -123,12 +123,27 @@ body {
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-decoration: none;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-decoration: none;
 }
 
+.container p {
+  margin-bottom: 30px;
+  color: #000000;
+}
+
+.container a:hover {
+  color: #EE1C25;
+  text-decoration: none;
+}
+  
+.container a {
+  color: #EE1C25;
+  text-decoration: none;
+}
+  
 .container-full {
   max-width: 1800px;
   margin: 0 auto;
@@ -236,7 +251,7 @@ a {
 
     .books h2 {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 0px;
       text-decoration: none;
       color: #000000;
     }
