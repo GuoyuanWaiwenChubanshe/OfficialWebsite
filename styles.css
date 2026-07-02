@@ -133,16 +133,6 @@ body {
   margin-bottom: 30px;
   color: #000000;
 }
-
-.container a:hover {
-  color: #EE1C25;
-  text-decoration: none;
-}
-  
-.container a {
-  color: #EE1C25;
-  text-decoration: none;
-}
   
 .container-full {
   max-width: 1800px;
