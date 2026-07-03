@@ -234,6 +234,11 @@ a {
       text-decoration: none;
     }
 
+    .welcome a:hover {
+      color: #EE1C25;
+      text-decoration: none;
+    }
+
     .books {
       padding: 40px 0;
       text-decoration: none;
