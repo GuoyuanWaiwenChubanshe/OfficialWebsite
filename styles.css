@@ -130,7 +130,7 @@ body {
 }
 
 .container p {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   color: #000000;
 }
 
@@ -281,7 +281,6 @@ a {
     .book-story p {
       color: #000000;
       text-decoration: none;
-      padding-bottom: 15px;
     }
 
     .book-grid {
