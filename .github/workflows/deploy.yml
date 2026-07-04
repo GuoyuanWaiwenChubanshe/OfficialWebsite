@@ -15,14 +15,23 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Build your site
         run: |
           mkdir _site
           cp -r ./* _site/ 2>/dev/null || true
+
+      - name: Generate sitemap with lastmod dates
+        uses: cicirello/generate-sitemap@v1
+        with:
+          base-url-path: https://www.boomgaard.org/
+          path: ./_site
 
       - name: Create IndexNow verification file
         run: echo "${{ secrets.INDEXNOW_KEY }}" > _site/${{ secrets.INDEXNOW_KEY }}.txt
@@ -42,7 +51,7 @@ jobs:
             -d @payload.json
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: '_site'
 
