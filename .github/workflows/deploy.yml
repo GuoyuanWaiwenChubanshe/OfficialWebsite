@@ -31,7 +31,7 @@ jobs:
         uses: cicirello/generate-sitemap@v1
         with:
           base-url-path: https://www.boomgaard.org/
-          path: ./_site
+          path-to-root: ./_site
 
       - name: Create IndexNow verification file
         run: echo "${{ secrets.INDEXNOW_KEY }}" > _site/${{ secrets.INDEXNOW_KEY }}.txt
