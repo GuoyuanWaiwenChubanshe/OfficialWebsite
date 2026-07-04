@@ -1,0 +1,44 @@
+name: Deploy site to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]  # Change "main" to "master" if your default branch is master
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build your site
+        # This copies all files into a '_site' folder.
+        # If you use a static generator (like Jekyll, Hugo, or npm build), replace this step.
+        run: |
+          mkdir _site
+          cp -r ./* _site/ 2>/dev/null || true
+
+      - name: Create IndexNow verification file
+        # This creates the {key}.txt file inside the final build folder
+        run: echo "${{ secrets.INDEXNOW_KEY }}" > _site/${{ secrets.INDEXNOW_KEY }}.txt
+
+      - name: Submit sitemap to IndexNow
+        run: |
+          curl -X POST "https://www.bing.com/indexnow?url=https://www.boomgaard.org/sitemap.xml&key=${{ secrets.INDEXNOW_KEY }}"
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '_site'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
