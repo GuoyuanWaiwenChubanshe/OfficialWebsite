@@ -29,16 +29,17 @@ jobs:
 
       - name: Submit sitemap to IndexNow
         run: |
+          cat > payload.json <<EOF
+          {
+            "host": "www.boomgaard.org",
+            "key": "${{ secrets.INDEXNOW_KEY }}",
+            "keyLocation": "https://www.boomgaard.org/${{ secrets.INDEXNOW_KEY }}.txt",
+            "urlList": ["https://www.boomgaard.org/sitemap.xml"]
+          }
+          EOF
           curl -X POST "https://api.indexnow.org/IndexNow" \
-      -H "Content-Type: application/json; charset=utf-8" \
-      -d '{
-        "host": "www.boomgaard.org",
-        "key": "${{ secrets.INDEXNOW_KEY }}",
-        "keyLocation": "https://www.boomgaard.org/${{ secrets.INDEXNOW_KEY }}.txt",
-        "urlList": [
-          "https://www.boomgaard.org/sitemap.xml"
-        ]
-      }'
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d @payload.json
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
