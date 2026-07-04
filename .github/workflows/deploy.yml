@@ -32,6 +32,7 @@ jobs:
         with:
           base-url-path: https://www.boomgaard.org/
           path-to-root: ./_site
+          drop-html-extension: true
 
       - name: Create IndexNow verification file
         run: echo "${{ secrets.INDEXNOW_KEY }}" > _site/${{ secrets.INDEXNOW_KEY }}.txt
