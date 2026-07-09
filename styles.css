@@ -624,9 +624,13 @@ text-decoration: none;
     .about-note {
       font-size: 13px;
       color: #444;
-      margin-top: 0.3rem;
+      margin-bottom:  1.2rem;
       font-style: italic;
       letter-spacing: 0.02em;
+    }
+
+    .about-mission-text {
+      margin-bottom:  1.2rem;
     }
 
     .about-list {
