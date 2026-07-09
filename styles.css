@@ -557,7 +557,7 @@ text-decoration: none;
 
     .about-text {
       font-size: 16px;
-      color: #444;
+      color: #000000;
       text-align: center;
       text-justify: inter-word;
       margin-bottom: 0.3rem;
@@ -624,7 +624,7 @@ text-decoration: none;
 
     .about-note {
       font-size: 13px;
-      color: #666;
+      color: #444;
       margin-top: 0.3rem;
       font-style: italic;
       letter-spacing: 0.02em;
@@ -641,13 +641,13 @@ text-decoration: none;
       margin-bottom: 0.5rem;
       padding-left: 1.6rem;
       position: relative;
-      color: #666;
+      color: #444;
     }
 
     .about-list li::before {
       position: absolute;
       left: 0;
-      color: #666;
+      color: #444;
       font-size: 1rem;
     }
 
