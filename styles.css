@@ -454,7 +454,7 @@ text-decoration: none;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
-      padding-bottom: 2.2rem;
+      gap: 2.2rem;
       position: relative;
       z-index: 1;
     }
@@ -501,7 +501,6 @@ text-decoration: none;
     .about-section {
       display: flex;
       flex-direction: column;
-      gap: 1.2rem;
       text-decoration: none;
     }
 
@@ -560,7 +559,7 @@ text-decoration: none;
       color: #000000;
       text-align: center;
       text-justify: inter-word;
-      margin-bottom: 0.3rem;
+      margin-bottom:  1.2rem;
     }
 
     .about-text strong {
