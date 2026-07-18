@@ -1763,14 +1763,22 @@ text-decoration: none;
   text-decoration: none;
 }
 
-.terms-of-service {
-
+.right-text {
+  color: #D3D3D3;
+  text-decoration: none;
 }
 
-.privacy-policy {
-
+.left-text {
+  color: #D3D3D3;
+  text-decoration: none;
 }
 
-.code-of-conduct {
+.right-text a {
+  color: #D3D3D3;
+  text-decoration: none;
+}
 
+.left-text a {
+  color: #D3D3D3;
+  text-decoration: none;
 }
