@@ -1785,4 +1785,17 @@ text-decoration: none;
 
 .sitemap-html {
   max-width: 1400px;
+  text-align: left;
+}
+
+.sitemap-html a {
+  color: #000000;
+  text-align: left;
+  text-decoration: none;
+}
+
+.sitemap-html a:hover {
+  color: #000000;
+  text-align: left;
+  text-decoration: none;
 }
