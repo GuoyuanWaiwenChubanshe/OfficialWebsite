@@ -49,11 +49,10 @@
         }
 
         body {
-            background: #f4f6fa;
+            background: #f0f2f6;
             font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             display: flex;
-            justify-content: center;
-            padding: 2rem 1rem;
+            justify-content: center;            padding: 2rem 1rem;
             min-height: 100vh;
         }
 
@@ -62,8 +61,8 @@
             max-width: 1000px;
             width: 100%;
             background: #ffffff;
-            border-radius: 20px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
             padding: 2.5rem 2.8rem;
         }
 
@@ -73,16 +72,16 @@
             }
         }
 
-        /* header */
+        /* Header */
         .sitemap-header {
             text-align: center;
-            border-bottom: 2px solid #eef2f7;
+            border-bottom: 2px solid #e8ecf3;
             padding-bottom: 1.5rem;
             margin-bottom: 2rem;
         }
 
         .sitemap-header h1 {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             font-weight: 600;
             color: #0b1a33;
             letter-spacing: -0.01em;
@@ -103,18 +102,28 @@
             text-decoration: underline;
         }
 
-        /* dropdown / details styling — clean & minimal */
-        details {
-            border-bottom: 1px solid #edf1f8;
-            padding: 0.1rem 0;
+        /* Language tabs - clean dropdown style */
+        .language-tabs {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
         }
 
-        details:last-child {
-            border-bottom: none;
+        .language-tab {
+            border: 1px solid #e8ecf3;
+            border-radius: 10px;
+            background: #fafbfd;
+            overflow: hidden;
+            transition: all 0.2s ease;
         }
 
-        summary {
-            padding: 0.8rem 0.4rem;
+        .language-tab:hover {
+            border-color: #cdd8e8;
+            background: #f8faff;
+        }
+
+        .language-tab summary {
+            padding: 0.9rem 1.2rem;
             font-weight: 500;
             font-size: 1rem;
             color: #1a3a6b;
@@ -124,51 +133,61 @@
             align-items: center;
             gap: 0.6rem;
             user-select: none;
+            transition: background 0.15s;
+            border-radius: 10px;
         }
 
-        summary::-webkit-details-marker {
+        .language-tab summary::-webkit-details-marker {
             display: none;
         }
 
-        summary::after {
-            content: "▸";
-            margin-left: auto;
-            font-size: 1rem;
-            color: #8a9bb5;
-            transition: transform 0.15s;
-        }
-
-        details[open] summary::after {
+        .language-tab summary::after {
             content: "▾";
+            margin-left: auto;
+            font-size: 0.9rem;
+            color: #8a9bb5;
+            transition: transform 0.2s;
         }
 
-        summary .lang-tag {
+        .language-tab[open] summary::after {
+            transform: rotate(180deg);
+        }
+
+        .language-tab .lang-name {
+            font-weight: 500;
+        }
+
+        .language-tab .lang-tag {
             font-size: 0.6rem;
             font-weight: 400;
             color: #7b8faa;
-            background: #f0f4fc;
-            padding: 0.1rem 0.6rem;
+            background: #eef2f9;
+            padding: 0.1rem 0.7rem;
             border-radius: 30px;
             letter-spacing: 0.03em;
         }
 
-        /* link list inside each dropdown */
+        /* Link list inside each dropdown */
         .link-group {
-            padding: 0.1rem 0.4rem 1rem 0.4rem;
+            padding: 0.2rem 1.2rem 1.2rem 1.2rem;
             display: flex;
             flex-direction: column;
             gap: 0.1rem;
+            border-top: 1px solid #eef2f7;
+            margin-top: 0.2rem;
+            padding-top: 0.8rem;
         }
 
         .link-item {
             display: flex;
             align-items: baseline;
-            padding: 0.25rem 0.4rem;
+            padding: 0.3rem 0.5rem;
             border-radius: 6px;
+            transition: background 0.1s;
         }
 
         .link-item:hover {
-            background: #f6f9ff;
+            background: #f0f6ff;
         }
 
         .link-item .indent {
@@ -186,6 +205,7 @@
             text-decoration: none;
             font-size: 0.9rem;
             word-break: break-all;
+            flex: 1;
         }
 
         .link-item a:hover {
@@ -194,58 +214,43 @@
             text-underline-offset: 2px;
         }
 
-        .link-item .path-preview {
-            font-size: 0.6rem;
-            color: #8a9bb5;
-            background: #f0f4fc;
-            padding: 0.05rem 0.6rem;
-            border-radius: 30px;
-            margin-left: 0.5rem;
-            white-space: nowrap;
-            flex-shrink: 0;
-            font-family: monospace;
-        }
-
         @media (max-width: 600px) {
             .link-item {
                 flex-wrap: wrap;
-            }
-            .link-item .path-preview {
-                margin-left: 0.2rem;
-                font-size: 0.5rem;
-                padding: 0.05rem 0.4rem;
+                padding: 0.2rem 0.2rem;
             }
             .link-item .indent {
                 width: 1rem;
                 font-size: 0.6rem;
             }
-            summary {
-                font-size: 0.9rem;
-                padding: 0.6rem 0.2rem;
-            }
             .link-group {
-                padding: 0.1rem 0.2rem 0.8rem 0.2rem;
+                padding: 0.2rem 0.8rem 1rem 0.8rem;
+            }
+            .language-tab summary {
+                font-size: 0.9rem;
+                padding: 0.7rem 0.9rem;
             }
         }
 
-        /* footer */
+        /* Footer */
         .footer-note {
-            margin-top: 2.2rem;
-            padding-top: 1.2rem;
-            border-top: 2px solid #eef2f7;
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid #e8ecf3;
             font-size: 0.75rem;
             color: #8a9bb5;
             text-align: center;
         }
 
         .footer-note .legal {
-            margin-top: 0.3rem;
+            margin-top: 0.4rem;
             font-size: 0.7rem;
         }
 
         .footer-note .legal a {
             color: #6b7f9a;
             text-decoration: none;
+            margin: 0 0.5rem;
         }
 
         .footer-note .legal a:hover {
@@ -253,7 +258,6 @@
         }
 
         .footer-note .rights {
-            font-weight: 400;
             color: #9aacbf;
         }
     </style>
