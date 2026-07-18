@@ -122,16 +122,27 @@ def generate_sitemap():
 
     # Add all pages as list items
     for file in html_files:
-        # Clean up the path for display
-        display_name = file.replace('index.html', '').replace('.html', '')
-        if display_name.endswith('/'):
-            display_name = display_name[:-1]
-        if display_name == '':
-            display_name = 'Home'
-        elif display_name == 'index':
-            display_name = 'Home'
+        # Clean up the path
+        clean_path = file.replace('index.html', '').replace('.html', '').replace('\\', '/')
         
-        # Clean up the display name
+        # Remove trailing slash if present
+        if clean_path.endswith('/'):
+            clean_path = clean_path[:-1]
+        
+        # Get the last part of the path
+        if '/' in clean_path:
+            # Get everything after the last slash
+            display_name = clean_path.split('/')[-1]
+        else:
+            display_name = clean_path
+        
+        # Handle special cases
+        if display_name == '' or display_name == 'index':
+            display_name = 'Home'
+        elif display_name == 'en-GB':
+            display_name = 'Home'  # Language root pages show as Home
+        
+        # Clean up the display name (replace hyphens/underscores with spaces)
         display_name = display_name.replace('-', ' ').replace('_', ' ')
         # Capitalize first letter of each word
         display_name = ' '.join(word.capitalize() for word in display_name.split())
