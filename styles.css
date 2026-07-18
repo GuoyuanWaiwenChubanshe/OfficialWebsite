@@ -1782,3 +1782,7 @@ text-decoration: none;
   color: #D3D3D3;
   text-decoration: none;
 }
+
+.sitemap-html {
+  max-width: 1400px;
+}
