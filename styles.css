@@ -1431,7 +1431,7 @@ text-decoration: none;
 
 .archive-publications-list li {
     display: flex;
-    gap: 20px;
+    gap: 140px;
     align-items: baseline;
     padding: 4px 0;
     text-align: left !important;
