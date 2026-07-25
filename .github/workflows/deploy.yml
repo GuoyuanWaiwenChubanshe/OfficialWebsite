@@ -1,0 +1,42 @@
+@@ -1,61 +0,0 @@
+name: Update sitemap only
+
+on:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  update-sitemap:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build your site
+        run: |
+          mkdir _site
+          cp -r ./* _site/ 2>/dev/null || true
+
+      - name: Generate sitemap with lastmod dates
+        uses: cicirello/generate-sitemap@v1
+        with:
+          base-url-path: https://www.boomgaard.org/
+          path-to-root: ./_site
+          drop-html-extension: true
+
+      - name: Commit and push updated sitemap
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          cp ./_site/sitemap.xml ./sitemap.xml
+          git add sitemap.xml
+          git diff --staged --quiet || git commit -m "Update sitemap [skip ci]"
+          git push
