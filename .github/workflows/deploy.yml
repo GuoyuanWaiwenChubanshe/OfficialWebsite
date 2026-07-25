@@ -5,9 +5,7 @@ on:
     branches: ["main"]
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write  # Changed from read to write for committing
 
 jobs:
   update-sitemap:
@@ -19,23 +17,16 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Build your site
-        run: |
-          mkdir _site
-          cp -r ./* _site/ 2>/dev/null || true
-
       - name: Generate sitemap with lastmod dates
         uses: cicirello/generate-sitemap@v1
         with:
           base-url-path: https://www.boomgaard.org/
-          path-to-root: ./_site
+          path-to-root: ./
           drop-html-extension: true
 
       - name: Commit and push updated sitemap
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          cp ./_site/sitemap.xml ./sitemap.xml
           git add sitemap.xml
-          git diff --staged --quiet || git commit -m "Update sitemap [skip ci]"
-          git push
+          git diff --staged --quiet || (git commit -m "Update sitemap [skip ci]" && git push)
