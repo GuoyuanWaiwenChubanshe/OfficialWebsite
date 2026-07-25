@@ -21,6 +21,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate sitemap
         uses: cicirello/generate-sitemap@v1
@@ -29,12 +30,23 @@ jobs:
           path-to-root: ./
           drop-html-extension: true
 
-      - name: Commit sitemap
+      - name: Commit and push sitemap if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add sitemap.xml
-          git diff --staged --quiet || (git commit -m "Update sitemap [skip ci]" && git push)
+          
+          # Check if sitemap.xml exists and has changes
+          if [ -f "sitemap.xml" ]; then
+            git add sitemap.xml
+            if git diff --staged --quiet; then
+              echo "No changes to sitemap"
+            else
+              git commit -m "Update sitemap [skip ci]"
+              git push origin HEAD:main
+            fi
+          else
+            echo "sitemap.xml not found"
+          fi
 
       - name: Build site with sitemap
         run: |
