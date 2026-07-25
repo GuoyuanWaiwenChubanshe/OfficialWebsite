@@ -1,14 +1,19 @@
-name: Update sitemap only
+name: Update sitemap and deploy
 
 on:
   push:
     branches: ["main"]
 
 permissions:
-  contents: write  # Changed from read to write for committing
+  contents: write
+  pages: write
+  id-token: write
 
 jobs:
-  update-sitemap:
+  update-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
 
     steps:
@@ -17,16 +22,30 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Generate sitemap with lastmod dates
+      - name: Generate sitemap
         uses: cicirello/generate-sitemap@v1
         with:
           base-url-path: https://www.boomgaard.org/
           path-to-root: ./
           drop-html-extension: true
 
-      - name: Commit and push updated sitemap
+      - name: Commit sitemap
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add sitemap.xml
           git diff --staged --quiet || (git commit -m "Update sitemap [skip ci]" && git push)
+
+      - name: Build site with sitemap
+        run: |
+          mkdir -p _site
+          cp -r ./* _site/ 2>/dev/null || true
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: '_site'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
