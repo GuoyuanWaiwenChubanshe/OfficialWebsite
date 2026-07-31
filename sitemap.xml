@@ -137,10 +137,6 @@
 <lastmod>2026-06-20T19:58:32+02:00</lastmod>
 </url>
 <url>
-<loc>https://www.boomgaard.org/eo/legal</loc>
-<lastmod>2026-06-20T19:58:32+02:00</lastmod>
-</url>
-<url>
 <loc>https://www.boomgaard.org/eo/privacy</loc>
 <lastmod>2026-06-20T19:58:32+02:00</lastmod>
 </url>
@@ -663,6 +659,10 @@
 <url>
 <loc>https://www.boomgaard.org/en-GB/library/</loc>
 <lastmod>2026-06-20T19:58:11+02:00</lastmod>
+</url>
+<url>
+<loc>https://www.boomgaard.org/eo/legal/</loc>
+<lastmod>2026-07-31T23:44:29+02:00</lastmod>
 </url>
 <url>
 <loc>https://www.boomgaard.org/eo/library/</loc>
