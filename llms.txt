@@ -84,7 +84,7 @@ Our primary mission is to guide, engage and ensure the scientific research, accu
 ## Language Sections
 
 - [دار بومغارد للنشر باللغات الأجنبية](https://www.boomgaard.org/ar-SA/): العربية (ar-SA)
-- [Boomgaard Verlag für Fremdsprachen Literatur](https://www.boomgaard.org/de-DE/): Deutsch (de-DE)
+- [Boomgaard Verlag für Fremdsprachenliteratur](https://www.boomgaard.org/de-DE/): Deutsch (de-DE)
 - [Boomgaard Foreign Languages Publishing Company](https://www.boomgaard.org/en-GB/): English (en-GB)
 - [Boomgaard Eldonejo por Fremdaj Lingvoj](https://www.boomgaard.org/eo/): Esperanto (eo)
 - [Boomgaard Ediciones de Lenguas Extranjeras](https://www.boomgaard.org/es-CU/): Español (es-CU)
