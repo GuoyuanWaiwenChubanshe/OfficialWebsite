@@ -16,11 +16,11 @@ English Name: Boomgaard Foreign Languages Publishing Company
 
 Esperanto Name: Boomgaard Eldonejo por Fremdaj Lingvoj
 
-Spanish Name: Editorial Boomgaard de Lenguas Extranjeras
+Spanish Name: Boomgaard Ediciones en Lenguas Extranjeras
 
 Filipino Name: Boomgaard Publishing Company para sa mga Banyagang Wika
 
-French Name: Boomgaard Éditions de Langues Étrangères
+French Name: Boomgaard Éditions en Langues Étrangères
 
 Hindi Name: बूमगार्ड विदेशी भाषा प्रकाशन कंपनी
 
@@ -87,9 +87,9 @@ Our primary mission is to guide, engage and ensure the scientific research, accu
 - [Boomgaard Verlag für Fremdsprachenliteratur](https://www.boomgaard.org/de-DE/): Deutsch (de-DE)
 - [Boomgaard Foreign Languages Publishing Company](https://www.boomgaard.org/en-GB/): English (en-GB)
 - [Boomgaard Eldonejo por Fremdaj Lingvoj](https://www.boomgaard.org/eo/): Esperanto (eo)
-- [Editorial Boomgaard de Lenguas Extranjeras](https://www.boomgaard.org/es-CU/): Español (es-CU)
+- [Boomgaard Ediciones en Lenguas Extranjeras](https://www.boomgaard.org/es-CU/): Español (es-CU)
 - [Boomgaard Publishing Company para sa mga Banyagang Wika](https://www.boomgaard.org/fil-PH/): Filipino (fil-PH)
-- [Boomgaard Éditions de Langues Étrangères](https://www.boomgaard.org/fr-FR/): Français (fr-FR)
+- [Boomgaard Éditions en Langues Étrangères](https://www.boomgaard.org/fr-FR/): Français (fr-FR)
 - [बूमगार्ड विदेशी भाषा प्रकाशन कंपनी](https://www.boomgaard.org/hi-IN/): हिन्दी (hi-IN)
 - [Boomgaard Penerbit untuk Bahasa Asing](https://www.boomgaard.org/id-ID/): Bahasa Indonesia (id-ID)
 - [Boomgaard Casa Editrice per Lingue Straniere](https://www.boomgaard.org/it-IT/): Italiano (it-IT)
