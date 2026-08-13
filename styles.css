@@ -98,6 +98,8 @@ main {
     top: 100%;
     right: 0;
     min-width: 180px;
+    max-height: 400px;
+    overflow-y: auto;
     background: white;
     border: 1px solid #CDCDCD;
     box-shadow: 0 6px 18px rgba(0,0,0,0.12);
@@ -106,19 +108,27 @@ main {
 }
 
 .boomgaard-language-dropdown a {
-    display: block;
-    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 1rem;
     color: #000000;
     text-decoration: none;
-    transition: background 0.15s ease;
+    transition: background 0.15s ease, color 0.15s ease;
+    font-size: 14px;
+    border-bottom: 1px solid #f0f0f0;
 }
 
 .boomgaard-language-dropdown a:hover {
+    background: #f5f5f5;
     color: #EE1C25;
 }
 
 .boomgaard-language-selector:hover .boomgaard-language-dropdown {
     display: block;
+}
+
+.boomgaard-language-dropdown a:last-child {
+    border-bottom: none;
 }
 
 body {
