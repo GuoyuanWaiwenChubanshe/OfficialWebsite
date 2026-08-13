@@ -660,6 +660,40 @@ text-decoration: none;
     }
 }
 
+@media (max-width: 768px) {
+    .boomgaard-language-selector {
+        left: 10px;
+    }
+    .boomgaard-language-button {
+        font-size: 13px;
+        padding: 12px 8px;
+    }
+    .boomgaard-language-dropdown {
+        min-width: 180px;
+    }
+    .boomgaard-language-dropdown a {
+        font-size: 13px;
+        padding: 0.5rem 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .boomgaard-language-selector {
+        left: 6px;
+    }
+    .boomgaard-language-button {
+        font-size: 11px;
+        padding: 10px 6px;
+    }
+    .boomgaard-language-dropdown {
+        min-width: 160px;
+    }
+    .boomgaard-language-dropdown a {
+        font-size: 12px;
+        padding: 0.4rem 0.6rem;
+    }
+}
+
     .about-lede {
       font-size: 1.6rem;
       line-height: 1.6;
