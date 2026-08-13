@@ -543,6 +543,111 @@ text-decoration: none;
         text-decoration: none;
 }
 
+.boomgaard-social-selector {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    z-index: 1001;
+}
+
+.boomgaard-social-button {
+    color: #000000;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.75rem 1rem;
+    transition: opacity 0.2s ease;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.boomgaard-social-button:hover {
+    color: #EE1C25;
+}
+
+.boomgaard-social-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    max-height: 500px;
+    overflow-y: auto;
+    background: white;
+    border: 1px solid #CDCDCD;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    display: none;
+    z-index: 1000;
+}
+
+.boomgaard-social-selector:hover .boomgaard-social-dropdown {
+    display: block;
+}
+
+.boomgaard-social-dropdown a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.6rem 1rem;
+    color: #000000;
+    text-decoration: none;
+    transition: background 0.15s ease;
+    font-size: 14px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.boomgaard-social-dropdown a:last-child {
+    border-bottom: none;
+}
+
+.boomgaard-social-dropdown a:hover {
+    background: #f5f5f5;
+    color: #EE1C25;
+}
+
+.boomgaard-social-dropdown a i {
+    width: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: inherit;
+}
+
+@media (max-width: 768px) {
+    .boomgaard-social-selector {
+        left: 10px;
+    }
+    .boomgaard-social-button {
+        font-size: 13px;
+        padding: 12px 8px;
+    }
+    .boomgaard-social-dropdown {
+        min-width: 180px;
+    }
+    .boomgaard-social-dropdown a {
+        font-size: 13px;
+        padding: 0.5rem 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .boomgaard-social-selector {
+        left: 6px;
+    }
+    .boomgaard-social-button {
+        font-size: 11px;
+        padding: 10px 6px;
+    }
+    .boomgaard-social-dropdown {
+        min-width: 160px;
+    }
+    .boomgaard-social-dropdown a {
+        font-size: 12px;
+        padding: 0.4rem 0.6rem;
+    }
+}
+
     .about-lede {
       font-size: 1.6rem;
       line-height: 1.6;
