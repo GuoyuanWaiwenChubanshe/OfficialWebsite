@@ -631,6 +631,10 @@ text-decoration: none;
   vertical-align: middle;
   margin-right: 8px;
 }
+.boomgaard-social-dropdown a img {
+  display: inline-block; /* ensures consistent sizing */
+}
+
 
 @media (max-width: 768px) {
     .boomgaard-social-selector {
