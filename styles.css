@@ -626,6 +626,12 @@ text-decoration: none;
     color: inherit;
 }
 
+.boomgaard-social-dropdown a i,
+.boomgaard-social-dropdown a img {
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
 @media (max-width: 768px) {
     .boomgaard-social-selector {
         left: 10px;
