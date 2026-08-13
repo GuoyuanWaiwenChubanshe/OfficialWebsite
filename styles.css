@@ -662,7 +662,7 @@ text-decoration: none;
 
 @media (max-width: 768px) {
     .boomgaard-language-selector {
-        left: 10px;
+        right: 10px;
     }
     .boomgaard-language-button {
         font-size: 13px;
@@ -679,7 +679,7 @@ text-decoration: none;
 
 @media (max-width: 480px) {
     .boomgaard-language-selector {
-        left: 6px;
+        right: 6px;
     }
     .boomgaard-language-button {
         font-size: 11px;
