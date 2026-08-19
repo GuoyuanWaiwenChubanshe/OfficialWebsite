@@ -2168,14 +2168,12 @@ text-decoration: none;
 .reader-original-link a {
   color: #EE1C25;
   text-decoration: none;
-  font-size: 0.95rem;
-  letter-spacing: 0.02em;
-  transition: color 0.2s ease;
+  font-size: 16px;
 }
 
 .reader-original-link a:hover {
-  color: #000000;
-  text-decoration: underline;
+  color: ##EE1C25;
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {
