@@ -83,96 +83,12 @@
   <link rel="alternate" hreflang="x-default" href="https://www.boomgaard.org/library/recommendation/chaoxianlaodongdangyongyuandezongshujizhutichaoxiandeyonghenglingxiujinzhengri/">
   </head>
 
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" />
-
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ GA_MEASUREMENT_ID }}"></script>
 <script>
-  function loadGA() {
-    console.log('loadGA() called – attempting to load Google Analytics');
-    
-    if (typeof gtag !== 'undefined') {
-      console.log('gtag already exists – skipping duplicate load');
-      return;
-    }
-
-    var script = document.createElement('script');
-    script.src = 'https://www.googletagmanager.com/gtag/js?id={{ GA_MEASUREMENT_ID }}';
-    script.async = true;
-    
-    script.onload = function() {
-      console.log('✅ gtag.js script loaded successfully');
-    };
-    script.onerror = function() {
-      console.error('❌ Failed to load gtag.js – check network/AdBlocker');
-    };
-    
-    document.head.appendChild(script);
-
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', '{{ GA_MEASUREMENT_ID }}');
-    console.log('✅ gtag initialized with ID: {{ GA_MEASUREMENT_ID }}');
-  }
-
-  function loadCookieConsentLibrary() {
-    var script = document.createElement('script');
-    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js';
-    
-    script.onload = function() {
-      if (typeof window.cookieconsent !== 'undefined' && window.cookieconsent.initialise) {
-        window.cookieconsent.initialise({
-          palette: {
-            popup: { background: '#404040' },
-            button: { background: '#EE1C25' }
-          },
-          theme: 'classic',
-          type: 'opt-in',
-          content: {
-            message: 'We use cookies to improve your experience.',
-            dismiss: 'Accept',
-            deny: 'Decline',
-            link: 'Learn more',
-            href: 'https://www.boomgaard.org/en-GB/legal/privacy'
-          },
-          onInitialise: function(status) {
-            console.log('onInitialise called – status:', status);
-            if (status === 'allow') {
-              console.log('User previously accepted – loading GA');
-              loadGA();
-            } else {
-              console.log('User previously declined or no consent – GA not loaded');
-            }
-          },
-          onStatusChange: function(status) {
-            console.log('onStatusChange called – status:', status);
-            if (status === 'allow') {
-              console.log('User just clicked Accept – loading GA');
-              loadGA();
-            } else {
-              console.log('User just clicked Decline – GA not loaded');
-            }
-          },
-          onRevokeChoice: function() {
-            console.log('onRevokeChoice called – user revoked consent');
-          }
-        });
-      } else {
-        console.warn('Cookie Consent library failed to load.');
-      }
-    };
-
-    script.onerror = function() {
-      console.error('Failed to load Cookie Consent library from CDN.');
-    };
-
-    document.head.appendChild(script);
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', loadCookieConsentLibrary);
-  } else {
-    loadCookieConsentLibrary();
-  }
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', '{{ GA_MEASUREMENT_ID }}');
 </script>
 
 <body>
