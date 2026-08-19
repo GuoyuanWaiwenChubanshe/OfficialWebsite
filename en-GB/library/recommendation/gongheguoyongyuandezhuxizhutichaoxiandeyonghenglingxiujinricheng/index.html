@@ -276,13 +276,35 @@ Amongst the praise of the Juche Korean people and the socialists and progressive
 <div class="divider"></div>
 
     <section class="archive-leader-section">
+      <h2 lang="en">Comprehensive Biographical Archive</h2>
 
-        <h2 lang="en">Comprehensive Biographical Archive</h2>
-        <h3 lang="en">Will be released soon</h3>
-        <p lang="en">
-this biography is currently being written by our research institute.
-        </p>
+      <div class="reader-root" id="readerRoot">
+        <div class="reader-loading" id="readerLoading">Loading PDF…</div>
 
+        <div class="book-reader" id="bookReader">
+          <div class="book-reader-viewport">
+            <div class="book-reader-pages">
+              <canvas id="readerPageLeft" class="book-reader-page"></canvas>
+              <canvas id="readerPageRight" class="book-reader-page right-page"></canvas>
+            </div>
+          </div>
+
+          <div class="book-reader-controls">
+            <button class="reader-arrow" id="readerPrev" type="button" aria-label="Previous page">&#10094;</button>
+            <div class="reader-page-counter">
+              <span class="reader-page-label">Page</span>
+              <input type="number" id="readerPageInput" min="1" value="1" inputmode="numeric" />
+              <span class="reader-page-total">/ <span id="readerTotalPages">0</span></span>
+            </div>
+            <button class="reader-arrow" id="readerNext" type="button" aria-label="Next page">&#10095;</button>
+          </div>
+        </div>
+
+        <div class="reader-fallback" id="readerFallback" style="display:none;">
+          <p>Unable to load the interactive reader. You can view the PDF directly:</p>
+          <iframe src="https://www.boomgaard.org/en-GB/library/recommendation/gongheguoyongyuandezhuxizhutichaoxiandeyonghenglingjiujinricheng/kimilsung-biography1.pdf" allow="autoplay"></iframe>
+        </div>
+      </div>
     </section>
 
 <div class="divider"></div>
@@ -802,5 +824,212 @@ this biography is currently being written by our research institute.
     </div>
   </div>
 </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script>
+    (function () {
+      const PDF_URL = 'https://www.boomgaard.org/en-GB/library/recommendation/gongheguoyongyuandezhuxizhutichaoxiandeyonghenglingjiujinricheng/kimilsung-biography1.pdf';
+
+      const loadingEl = document.getElementById('readerLoading');
+      const bookReaderEl = document.getElementById('bookReader');
+      const fallbackEl = document.getElementById('readerFallback');
+      const leftCanvas = document.getElementById('readerPageLeft');
+      const rightCanvas = document.getElementById('readerPageRight');
+      const prevBtn = document.getElementById('readerPrev');
+      const nextBtn = document.getElementById('readerNext');
+      const pageInput = document.getElementById('readerPageInput');
+      const totalPagesSpan = document.getElementById('readerTotalPages');
+
+      let pdfDoc = null;
+      let totalPages = 0;
+      let currentPage = 1;
+
+      function isMobileView() {
+        return window.matchMedia('(max-width: 768px)').matches;
+      }
+
+      function resetCanvas(canvas) {
+        if (!canvas) return;
+        canvas.width = 1;
+        canvas.height = 1;
+        const ctx = canvas.getContext('2d');
+        if (ctx) {
+          ctx.fillStyle = '#ffffff';
+          ctx.fillRect(0, 0, 1, 1);
+        }
+      }
+
+      async function renderPage(pageNumber, canvas) {
+        if (!pdfDoc || !canvas) return;
+
+        if (pageNumber < 1 || pageNumber > totalPages) {
+          resetCanvas(canvas);
+          return;
+        }
+
+        const cssWidth = canvas.clientWidth;
+        const cssHeight = canvas.clientHeight;
+
+        if (!cssWidth || !cssHeight) {
+          resetCanvas(canvas);
+          return;
+        }
+
+        try {
+          const page = await pdfDoc.getPage(pageNumber);
+          const baseViewport = page.getViewport({ scale: 1 });
+          const dpr = window.devicePixelRatio || 1;
+          const scale = Math.min(cssWidth / baseViewport.width, cssHeight / baseViewport.height) * dpr;
+          const viewport = page.getViewport({ scale });
+          const ctx = canvas.getContext('2d');
+
+          canvas.width = viewport.width;
+          canvas.height = viewport.height;
+
+          ctx.fillStyle = '#ffffff';
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+          if (canvas._renderTask) {
+            try {
+              canvas._renderTask.cancel();
+            } catch (e) {
+              // noop
+            }
+          }
+
+          const renderTask = page.render({
+            canvasContext: ctx,
+            viewport: viewport
+          });
+
+          canvas._renderTask = renderTask;
+          await renderTask.promise;
+        } catch (err) {
+          if (err && err.name !== 'RenderingCancelledException') {
+            console.error('PDF page render error', err);
+          }
+        }
+      }
+
+      async function renderCurrentSpread() {
+        if (!pdfDoc) return;
+
+        const mobile = isMobileView();
+
+        if (mobile) {
+          await renderPage(currentPage, leftCanvas);
+          resetCanvas(rightCanvas);
+        } else {
+          await renderPage(currentPage, leftCanvas);
+          if (currentPage + 1 <= totalPages) {
+            await renderPage(currentPage + 1, rightCanvas);
+          } else {
+            resetCanvas(rightCanvas);
+          }
+        }
+      }
+
+      function updateControls() {
+        if (!pdfDoc) return;
+
+        totalPagesSpan.textContent = totalPages;
+        pageInput.value = currentPage;
+        pageInput.max = totalPages;
+
+        const mobile = isMobileView();
+        prevBtn.disabled = currentPage <= 1;
+
+        if (mobile) {
+          nextBtn.disabled = currentPage >= totalPages;
+        } else {
+          nextBtn.disabled = currentPage + 2 > totalPages;
+        }
+      }
+
+      function renderAndUpdate() {
+        if (!pdfDoc) return;
+
+        if (currentPage < 1) currentPage = 1;
+        if (currentPage > totalPages) currentPage = totalPages;
+
+        updateControls();
+        renderCurrentSpread();
+      }
+
+      function goToPageFromInput() {
+        if (!pdfDoc) return;
+
+        const requested = parseInt(pageInput.value, 10);
+        if (isNaN(requested) || requested < 1) {
+          pageInput.value = currentPage;
+          return;
+        }
+
+        currentPage = Math.min(totalPages, requested);
+        renderAndUpdate();
+      }
+
+      prevBtn.addEventListener('click', function () {
+        if (!pdfDoc || prevBtn.disabled) return;
+        const step = isMobileView() ? 1 : 2;
+        currentPage = Math.max(1, currentPage - step);
+        renderAndUpdate();
+      });
+
+      nextBtn.addEventListener('click', function () {
+        if (!pdfDoc || nextBtn.disabled) return;
+        const step = isMobileView() ? 1 : 2;
+        currentPage = Math.min(totalPages, currentPage + step);
+        renderAndUpdate();
+      });
+
+      pageInput.addEventListener('change', goToPageFromInput);
+      pageInput.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          goToPageFromInput();
+        }
+      });
+
+      window.matchMedia('(max-width: 768px)').addEventListener('change', function () {
+        if (pdfDoc) renderAndUpdate();
+      });
+
+      function showFallback() {
+        loadingEl.style.display = 'none';
+        bookReaderEl.style.display = 'none';
+        fallbackEl.style.display = 'block';
+      }
+
+      function initPdf() {
+        if (typeof pdfjsLib === 'undefined') {
+          showFallback();
+          return;
+        }
+
+        pdfjsLib.GlobalWorkerOptions.workerSrc =
+          'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+        pdfjsLib.getDocument({ url: PDF_URL, withCredentials: false }).promise
+          .then(function (doc) {
+            pdfDoc = doc;
+            totalPages = doc.numPages;
+            currentPage = 1;
+
+            loadingEl.style.display = 'none';
+            bookReaderEl.style.display = 'flex';
+
+            setTimeout(function () {
+              renderAndUpdate();
+            }, 50);
+          })
+          .catch(function (err) {
+            console.error('PDF load error', err);
+            showFallback();
+          });
+      }
+
+      initPdf();
+    })();
+  </script>
 </body>
 </html>
