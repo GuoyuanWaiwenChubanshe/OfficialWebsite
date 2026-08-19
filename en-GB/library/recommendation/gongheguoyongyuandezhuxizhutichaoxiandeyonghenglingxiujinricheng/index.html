@@ -83,13 +83,53 @@
   <link rel="alternate" hreflang="x-default" href="https://www.boomgaard.org/library/recommendation/gongheguoyongyuandezhuxizhutichaoxiandeyonghenglingxiujinricheng/">
   </head>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ GA_MEASUREMENT_ID }}"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){ dataLayer.push(arguments); }
-  gtag('js', new Date());
-  gtag('config', '{{ GA_MEASUREMENT_ID }}');
-</script>
+  <script src="https://unpkg.com/cookie-consent-gdpr@latest/dist/cookie-consent-gdpr.min.js"></script>
+  <script>
+    CookieConsent.init({
+      categories: {
+        necessary: {
+          enabled: true,
+          readOnly: true,
+          title: 'Strictly Necessary',
+          description: 'Essential for the website to work.',
+        },
+        analytics: {
+          enabled: false,
+          readOnly: false,
+          title: 'Analytics',
+          description: 'We use Google Analytics to improve our site.',
+          cookies: [
+            { name: '_ga', provider: 'Google Analytics', purpose: 'Distinguishes users.', expiry: '2 years' },
+            { name: '_gid', provider: 'Google Analytics', purpose: 'Distinguishes users.', expiry: '24 hours' },
+          ],
+        },
+      },
+    });
+  </script>
+
+  <script>
+    function loadGA() {
+      var script = document.createElement('script');
+      script.src = 'https://www.googletagmanager.com/gtag/js?id={{ GA_MEASUREMENT_ID }}';
+      script.async = true;
+      document.head.appendChild(script);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', '{{ GA_MEASUREMENT_ID }}');
+    }
+
+    if (CookieConsent.getUserConsent().analytics) {
+      loadGA();
+    }
+
+    CookieConsent.onConsent(function(consent) {
+      if (consent.analytics && typeof gtag === 'undefined') {
+        loadGA();
+      }
+    });
+  </script>
 
 <body>
 
