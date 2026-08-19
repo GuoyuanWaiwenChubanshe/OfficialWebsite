@@ -83,6 +83,79 @@
   <link rel="alternate" hreflang="x-default" href="https://www.boomgaard.org/library/recommendation/">
 </head>
 
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" />
+<script>
+  function loadGA() {
+    // Prevent loading twice if gtag already exists
+    if (typeof gtag !== 'undefined') return;
+    
+    // Dynamically create the gtag.js script
+    var script = document.createElement('script');
+    script.src = 'https://www.googletagmanager.com/gtag/js?id={{ GA_MEASUREMENT_ID }}';
+    script.async = true;
+    document.head.appendChild(script);
+
+    // Initialize the dataLayer and gtag function
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', '{{ GA_MEASUREMENT_ID }}');
+  }
+
+  function loadCookieConsentLibrary() {
+    var script = document.createElement('script');
+    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js';
+    
+    script.onload = function() {
+      // Library loaded successfully – now initialize it
+      if (typeof window.cookieconsent !== 'undefined' && window.cookieconsent.initialise) {
+        window.cookieconsent.initialise({
+          palette: {
+            popup: { background: '#404040' },
+            button: { background: '#EE1C25' }
+          },
+          theme: 'classic',
+          type: 'opt-in',
+          content: {
+            message: 'We use cookies to improve your experience.',
+            dismiss: 'Accept',
+            deny: 'Decline',
+            link: 'Learn more',
+            href: 'https://www.boomgaard.org/en-GB/legal/privacy'
+          },
+          onInitialise: function(status) {
+            if (status === 'allow') {
+              loadGA();
+            }
+          },
+          onStatusChange: function(status) {
+            if (status === 'allow') {
+              loadGA();
+            }
+          },
+          onRevokeChoice: function() {
+          }
+        });
+      } else {
+        console.warn('Cookie Consent library failed to load properly.');
+      }
+    };
+
+    script.onerror = function() {
+      console.error('Could not load Cookie Consent library from CDN.');
+    };
+
+    document.head.appendChild(script);
+  }
+
+  // --- Start loading the consent library once the page is ready ---
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadCookieConsentLibrary);
+  } else {
+    loadCookieConsentLibrary();
+  }
+</script>
+
 <body>
 
 <header class="top-header">
