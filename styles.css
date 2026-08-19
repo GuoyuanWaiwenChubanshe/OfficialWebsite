@@ -2160,6 +2160,24 @@ text-decoration: none;
   white-space: nowrap;
 }
 
+.reader-original-link {
+  margin-top: 1.2rem;
+  text-align: center;
+}
+
+.reader-original-link a {
+  color: #EE1C25;
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease;
+}
+
+.reader-original-link a:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
 @media (max-width: 768px) {
   .book-reader-pages {
     gap: 0;
