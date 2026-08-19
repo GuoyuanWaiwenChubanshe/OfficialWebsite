@@ -84,22 +84,34 @@
 </head>
 
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" />
+
 <script>
   function loadGA() {
-    // Prevent loading twice if gtag already exists
-    if (typeof gtag !== 'undefined') return;
+    console.log('loadGA() called – attempting to load Google Analytics');
     
-    // Dynamically create the gtag.js script
+    if (typeof gtag !== 'undefined') {
+      console.log('gtag already exists – skipping duplicate load');
+      return;
+    }
+
     var script = document.createElement('script');
     script.src = 'https://www.googletagmanager.com/gtag/js?id={{ GA_MEASUREMENT_ID }}';
     script.async = true;
+    
+    script.onload = function() {
+      console.log('✅ gtag.js script loaded successfully');
+    };
+    script.onerror = function() {
+      console.error('❌ Failed to load gtag.js – check network/AdBlocker');
+    };
+    
     document.head.appendChild(script);
 
-    // Initialize the dataLayer and gtag function
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', '{{ GA_MEASUREMENT_ID }}');
+    console.log('✅ gtag initialized with ID: {{ GA_MEASUREMENT_ID }}');
   }
 
   function loadCookieConsentLibrary() {
@@ -107,7 +119,6 @@
     script.src = 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js';
     
     script.onload = function() {
-      // Library loaded successfully – now initialize it
       if (typeof window.cookieconsent !== 'undefined' && window.cookieconsent.initialise) {
         window.cookieconsent.initialise({
           palette: {
@@ -124,37 +135,46 @@
             href: 'https://www.boomgaard.org/en-GB/legal/privacy'
           },
           onInitialise: function(status) {
+            console.log('onInitialise called – status:', status);
             if (status === 'allow') {
+              console.log('User previously accepted – loading GA');
               loadGA();
+            } else {
+              console.log('User previously declined or no consent – GA not loaded');
             }
           },
           onStatusChange: function(status) {
+            console.log('onStatusChange called – status:', status);
             if (status === 'allow') {
+              console.log('User just clicked Accept – loading GA');
               loadGA();
+            } else {
+              console.log('User just clicked Decline – GA not loaded');
             }
           },
           onRevokeChoice: function() {
+            console.log('onRevokeChoice called – user revoked consent');
           }
         });
       } else {
-        console.warn('Cookie Consent library failed to load properly.');
+        console.warn('Cookie Consent library failed to load.');
       }
     };
 
     script.onerror = function() {
-      console.error('Could not load Cookie Consent library from CDN.');
+      console.error('Failed to load Cookie Consent library from CDN.');
     };
 
     document.head.appendChild(script);
   }
 
-  // --- Start loading the consent library once the page is ready ---
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', loadCookieConsentLibrary);
   } else {
     loadCookieConsentLibrary();
   }
 </script>
+
 <body>
 
 <header class="top-header">
