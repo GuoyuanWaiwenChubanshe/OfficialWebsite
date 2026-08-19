@@ -2016,3 +2016,195 @@ text-decoration: none;
     grid-template-columns: 1fr;
   }
 }
+
+.reader-root {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reader-loading,
+.reader-fallback {
+  width: 100%;
+  max-width: 900px;
+  margin: 1rem auto;
+  padding: 2rem;
+  text-align: center;
+  color: #000000;
+  background: #ffffff;
+  border: 1px solid #CDCDCD;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.reader-fallback iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+  margin-top: 1rem;
+}
+
+.book-reader {
+  width: 100%;
+  max-width: 1400px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book-reader-viewport {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.book-reader-pages {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1.5rem;
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.book-reader-page {
+  flex: 1 1 0;
+  min-width: 0;
+  width: 50%;
+  max-width: 560px;
+  aspect-ratio: 210 / 297;
+  background: #ffffff;
+  border: 1px solid #CDCDCD;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  object-fit: contain;
+  display: block;
+}
+
+.book-reader-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.reader-arrow {
+  background: #ffffff;
+  border: 1px solid #CDCDCD;
+  color: #000000;
+  width: 46px;
+  height: 46px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding: 0;
+}
+
+.reader-arrow:hover:not(:disabled) {
+  border-color: #EE1C25;
+  color: #EE1C25;
+}
+
+.reader-arrow:disabled {
+  cursor: not-allowed;
+  opacity: 0.35;
+}
+
+.reader-page-counter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  color: #000000;
+}
+
+.reader-page-label {
+  white-space: nowrap;
+}
+
+.reader-page-counter input[type="number"] {
+  width: 70px;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #CDCDCD;
+  font-size: 1rem;
+  text-align: center;
+  color: #000000;
+  background: #ffffff;
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.reader-page-counter input[type="number"]::-webkit-outer-spin-button,
+.reader-page-counter input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.reader-page-counter input:focus {
+  outline: none;
+  border-color: #EE1C25;
+}
+
+.reader-page-total {
+  color: #444444;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .book-reader-pages {
+    gap: 0;
+    padding: 0 10px;
+  }
+
+  .book-reader-page {
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  .book-reader-page.right-page {
+    display: none;
+  }
+
+  .book-reader-controls {
+    gap: 1rem;
+  }
+
+  .reader-arrow {
+    width: 42px;
+    height: 42px;
+    font-size: 1.2rem;
+  }
+
+  .reader-page-counter input[type="number"] {
+    width: 60px;
+  }
+}
+
+@media (max-width: 400px) {
+  .reader-arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+
+  .reader-page-counter {
+    gap: 0.3rem;
+    font-size: 0.95rem;
+  }
+
+  .reader-page-counter input[type="number"] {
+    width: 52px;
+    padding: 0.35rem 0.4rem;
+  }
+}
