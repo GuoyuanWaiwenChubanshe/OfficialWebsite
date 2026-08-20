@@ -1,3 +1,53 @@
+name: Update sitemap and deploy
+
+on:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  update-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate sitemap
+        uses: cicirello/generate-sitemap@v1
+        with:
+          base-url-path: https://www.boomgaard.org/
+          path-to-root: ./
+          drop-html-extension: true
+
+      - name: Commit and push sitemap if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          if [ -f "sitemap.xml" ]; then
+            git add sitemap.xml
+            if git diff --staged --quiet; then
+              echo "No changes to sitemap"
+            else
+              git commit -m "Update sitemap [skip ci]"
+              git push origin HEAD:main
+            fi
+          else
+            echo "sitemap.xml not found"
+          fi
+
+      # 🔽 COMBINED STEP: Inject all tracking IDs from Secrets 🔽
       - name: Inject tracking IDs from secrets
         env:
           GTM_ID: ${{ secrets.GTM_ID }}
@@ -5,7 +55,7 @@
           META_PIXEL_ID: ${{ secrets.META_PIXEL_ID }}
           TIKTOK_PIXEL_ID: ${{ secrets.TIKTOK_PIXEL_ID }}
           X_PIXEL_ID: ${{ secrets.X_PIXEL_ID }}
-          COOKIEBOT_ID: ${{ secrets.COOKIEBOT_ID }}   # <-- ADD THIS LINE
+          COOKIEBOT_ID: ${{ secrets.COOKIEBOT_ID }}   # <-- ADDED
         run: |
           # Google Tag Manager
           if [ -n "$GTM_ID" ]; then
@@ -47,10 +97,24 @@
             echo "Warning: X_PIXEL_ID secret not set. Skipping."
           fi
 
-          # Cookiebot                                      # <-- ADD THIS BLOCK
+          # Cookiebot                                      # <-- ADDED BLOCK
           if [ -n "$COOKIEBOT_ID" ]; then
             find . -type f -name "*.html" -exec sed -i "s|__COOKIEBOT_ID__|$COOKIEBOT_ID|g" {} +
             echo "Cookiebot ID injected."
           else
             echo "Warning: COOKIEBOT_ID secret not set. Skipping."
           fi
+
+      - name: Build site with sitemap
+        run: |
+          mkdir -p _site
+          cp -r ./* _site/ 2>/dev/null || true
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: '_site'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
