@@ -47,14 +47,53 @@ jobs:
             echo "sitemap.xml not found"
           fi
 
-      # 🔽 NEW STEP: Inject the GA ID from Secrets 🔽
-      - name: Inject Google Analytics ID
+      # 🔽 NEW COMBINED STEP: Inject all tracking IDs from Secrets 🔽
+      - name: Inject tracking IDs from secrets
+        env:
+          GTM_ID: ${{ secrets.GTM_ID }}
+          GA_MEASUREMENT_ID: ${{ secrets.GA_MEASUREMENT_ID }}
+          META_PIXEL_ID: ${{ secrets.META_PIXEL_ID }}
+          TIKTOK_PIXEL_ID: ${{ secrets.TIKTOK_PIXEL_ID }}
+          X_PIXEL_ID: ${{ secrets.X_PIXEL_ID }}
         run: |
-          if [ -n "${{ secrets.GA_MEASUREMENT_ID }}" ]; then
-            find . -name "*.html" -exec sed -i "s/{{ GA_MEASUREMENT_ID }}/${{ secrets.GA_MEASUREMENT_ID }}/g" {} \;
-            echo "GA ID injected successfully."
+          # Google Tag Manager
+          if [ -n "$GTM_ID" ]; then
+            find . -type f -name "*.html" -exec sed -i "s|__GTM_CONTAINER_ID__|$GTM_ID|g" {} +
+            echo "GTM ID injected."
           else
-            echo "Warning: GA_MEASUREMENT_ID secret not set. Skipping injection."
+            echo "Warning: GTM_ID secret not set. Skipping."
+          fi
+
+          # Google Analytics 4
+          if [ -n "$GA_MEASUREMENT_ID" ]; then
+            find . -type f -name "*.html" -exec sed -i "s|{{ GA_MEASUREMENT_ID }}|$GA_MEASUREMENT_ID|g" {} +
+            echo "GA ID injected."
+          else
+            echo "Warning: GA_MEASUREMENT_ID secret not set. Skipping."
+          fi
+
+          # Meta Pixel
+          if [ -n "$META_PIXEL_ID" ]; then
+            find . -type f -name "*.html" -exec sed -i "s|__META_PIXEL_ID__|$META_PIXEL_ID|g" {} +
+            echo "Meta Pixel ID injected."
+          else
+            echo "Warning: META_PIXEL_ID secret not set. Skipping."
+          fi
+
+          # TikTok Pixel
+          if [ -n "$TIKTOK_PIXEL_ID" ]; then
+            find . -type f -name "*.html" -exec sed -i "s|__TIKTOK_PIXEL_ID__|$TIKTOK_PIXEL_ID|g" {} +
+            echo "TikTok Pixel ID injected."
+          else
+            echo "Warning: TIKTOK_PIXEL_ID secret not set. Skipping."
+          fi
+
+          # X (Twitter) Pixel
+          if [ -n "$X_PIXEL_ID" ]; then
+            find . -type f -name "*.html" -exec sed -i "s|__X_PIXEL_ID__|$X_PIXEL_ID|g" {} +
+            echo "X Pixel ID injected."
+          else
+            echo "Warning: X_PIXEL_ID secret not set. Skipping."
           fi
 
       - name: Build site with sitemap
